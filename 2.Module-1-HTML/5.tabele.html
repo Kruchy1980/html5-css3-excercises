@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moduł 3.4 - tabele</title>
+    <link rel="icon" href="./bookmark-icon/html5.png" type="icon/png" />
+    <style>
+        table,
+        td,
+        th,
+        tr {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header - najweiększy header są od h1-h6 -->
+    <h1>Dzień Dobry!! - Tables</h1>
+    <!--  Znacznik Tabeli -->
+    <table>
+        <!-- Znacznik nagłówka tabeli - nie obowiązkowy -->
+        <thead>
+            <!--  Znacznik wiersza tabeli -->
+            <tr>
+                <!-- Znacznik kolumny nagłówka tabeli - nie obowiązkowy-->
+                <th>Pierwsza kolumna pierwszego wiersza</th>
+                <th>Druga kolumna pierwszego wiersza itd</th>
+                <td>
+                    Dodany nie znacznik nagłówka tabeli, lecz kolumny tabeli odpowiadający za trzecią kolumnę tabeli
+                </td>
+                <td></td>
+            </tr>
+        </thead>
+        <!-- Znacznik ciała tabeli -->
+        <tbody>
+            <!--  Znacznik wiersza tabeli -->
+            <tr>
+                <!-- Znacznik kolumny tabeli -->
+                <td colspan="2">
+                    Pierwsza kolumna pierwszego wiersza ciała tabeli - kolumny możnałączyć zresztą tak samo jak wiersze
+                </td>
+
+                <td>
+                    Za pomocą atrybutu colspan="ilość łączonych kolumn"
+                </td>
+                <td rowspan="2">
+                    Również za pomocą atrybutu rowspan możemy oznaczyć, że jedna kolumna zajmie 2 rzędzy tabeli
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>Hej Hej</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
