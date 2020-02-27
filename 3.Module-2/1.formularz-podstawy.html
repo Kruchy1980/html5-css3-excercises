@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.Formularz</title>
+    <!-- Bookmark icon -->
+    <link rel="icon" href="./bookmark-icon/text-file.png" type="icon/png" />
+</head>
+
+<body>
+    <h1>
+        Prosty formularz -
+        <small>służący do wyszukiwania elementów w przeglądarce</small>
+    </h1>
+    <!-- Aby stworzyć formularz, musimy umieścić go w tagu <form></form> - wysłanie do strony google.com, gdzie atrybut action służy do przekierowania na stronę po zatwierdzeniu formularza, a atrybut target doprowadza do tego, aby wyszukiwarka otwierła się w osobnym okienku-->
+    <form action="https://google.com/search" target="_blank">
+        <!-- Input tekstowy do określania czego szukamy -->
+        <input type="text" name="q" /> <br />
+        <hr />
+        <!-- Button do wyszukuwanie -->
+        <button>Szukaj</button>
+    </form>
+</body>
+
+</html>
