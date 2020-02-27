@@ -12,11 +12,11 @@
 <body>
     <h1>
         Prosty formularz -
-        <small>służący do wyszukiwania elementów w przeglądarce</small>
+        <em>służący do wyszukiwania elementów w przeglądarce za pomocą google</em>
     </h1>
     <!-- Aby stworzyć formularz, musimy umieścić go w tagu <form></form> - wysłanie do strony google.com, gdzie atrybut action służy do przekierowania na stronę po zatwierdzeniu formularza, a atrybut target doprowadza do tego, aby wyszukiwarka otwierła się w osobnym okienku-->
     <form action="https://google.com/search" target="_blank">
-        <!-- Input tekstowy do określania czego szukamy -->
+        <!-- Input tekstowy do określania czego szukamy, gdzie name="q" pozwala na wyszukanie teksty bezpośrednio po zatwierdzeniu formularza. -->
         <input type="text" name="q" /> <br />
         <hr />
         <!-- Button do wyszukuwanie -->
