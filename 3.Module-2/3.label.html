@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.Formularz - etykiety/albels</title>
+    <!-- Bookmark icon -->
+    <link rel="icon" href="./bookmark-icon/text-file.png" type="icon/png" />
+</head>
+
+<body>
+    <h1>
+        Podstawowe elementy formularza -
+        <em>Labelki/Etykiety</em>
+    </h1>
+    <!-- Basic form-->
+    <!-- Labelki służą do dodawanie etykiet - opisów do inputów - przydatne w celu połączenia z danym oknem/inputem, aby po naciśnięciu na nią focusowało- przenosiło do danego okienka - obowiązkiem jest dodanie id o danej nazwie w inpucie - stary sposób i for="dana nazwa" w tagu label -->
+    <form action="">
+        <label for="surname">Nazwisko: </label>
+        <input type="text" name="surname" id="surname" placeholder="Wpisz Swoje nazwisko" />
+        </br>
+        <hr>
+
+        <!-- Nowy sposób - zagnieżdżając inputa w tagu label nie musimy dodawać do niego id z daną nazwą oraz w samym tagu label nie powinno się używać atrybutu "for"-->
+        <label>
+            Branża:
+            <input type="text" name="branch" placeholder="Wpisz Swoją Branżę" />
+         </label>
+
+    </form>
+</body>
+
+</html>
