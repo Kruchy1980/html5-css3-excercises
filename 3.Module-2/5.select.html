@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.Formularz - Select's</title>
+    <!-- Bookmark icon -->
+    <link rel="icon" href="./bookmark-icon/text-file.png" type="icon/png" />
+</head>
+
+<body>
+    <h1>
+        Podstawowe elementy formularza -
+        <em>Select's</em>
+    </h1>
+    <!-- Basic form-->
+    <!-- Select jest to dropdown, w którym możemy wybrać jedną lub więcej opcji-->
+    <!-- Select musi posiadać zagnieżdżone w sobie opcje/option, które to są opcjami wyboru. -->
+    <form action="#">
+        <label>
+        Chronologia filmu terminator ;)
+        <!-- Aby wysyłanie zadziałało  wywyłąnie select musi mieć name. mMżna użyć disabled na całym selekcie lub tylko na jednym jego elemecie 'option'. !!!! Uwaga w przeciwieństwie do radio buttonów i checkboxów jeśli chcemy defaultowo zaznaczyć jedną opcję która będzie na początku zaznaczona to robimy to za pomocą atrybutu selected,  nie checkeds-->
+
+        <select name="movie" id="" required autofocus>
+          <!-- Można dodać pustą opcję aby nie było zaznaczonej żadnej -->
+          <option value=""></option>
+          <option value="Ternimator I">Terminator I</option>
+          <option value="Ternimator II">Terminator II</option>
+          <option value="Ternimator III" selected>Terminator III</option>
+          <option disabled value="Ternimator IV">Terminator IV</option>
+        </select>
+        <br />
+        <!-- Tylko na potrzeby tego formularza -->
+        <button>Wyślij</button>
+      </label>
+    </form>
+    <!-- select może posiadać atrybut multiply co pozwala na wybór kilku opcji. -->
+    <form action="#">
+        <label>
+        Chronologia filmu terminator ;)
+        <!-- Aby wysyłanie zadziałało  wywyłąnie select musi mieć name. mMżna użyć disabled na całym selekcie lub tylko na jednym jego elemecie 'option'. !!!! Uwaga w przeciwieństwie do radio buttonów i checkboxów jeśli chcemy defaultowo zaznaczyć jedną opcję która będzie na początku zaznaczona to robimy to za pomocą atrybutu selected,  nie checkeds-->
+        <!-- select może posiadać atrybut multiple co pozwala na wybór kilku opcji. -->
+        <select name="movie" id="" multiple>
+          <!-- Można dodać pustą opcję aby nie było zaznaczonej żadnej -->
+          <option value=""></option>
+          <option value="Ternimator I">Terminator I</option>
+          <option value="Ternimator II">Terminator II</option>
+          <option value="Ternimator III">Terminator III</option>
+          <option disabled value="Ternimator IV">Terminator IV</option>
+        </select>
+        <br />
+        <!-- Tylko na potrzeby tego formularza -->
+        <button>Wyślij</button>
+      </label>
+    </form>
+</body>
+
+</html>
