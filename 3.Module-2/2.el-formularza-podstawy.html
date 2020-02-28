@@ -14,7 +14,41 @@
         Podstawowe elementy formularza -
         <em>elementy formulrza i ich atrybuty</em>
     </h1>
+    <!-- Basic form-->
+    <form action="https://www.wp.pl" target="_blank">
+        <!--  input  + atrubut name, value, pladeholder, etc.-->
+        <!-- name - przydatne jest do identyfikowania inputa, szczególnie jeśli jest ich więcej niż jeden tego samego typu -->
+        <!-- type - określa typ inputa ponieważ jest kilka typów defaultowo skonfigurowanych -->
+        <!-- value - wyświetla się wraz z załadowaniem formularza i jest wartością inputa, którą można wykoraystać przy dalszej obróbce za pomocą np javascript'u !!! Uwaga nie stosować szczególnie przy danych newralgicznych ponieważ mogą one być wykorzystane w celach hakerskich - lepiej stosować placeholdery, ponieważ ich wartości ayutomat nie wyciągnie tak łatwo, ale stosować tylko do ogólnych informacji -->
+        <!-- disabled sprawia, że dane pole jest wyłączone/ niemożliwe do edycji i również nie jest brane pod uwagę przy wysyłaniu danych formularza -->
+        <!-- readonly - jest również nieedytowalnie jak disabled z tą różnicą, że zostaje dołączone do wysłanego formularza - nie ma sensu stosować razem ponieważ nie zadziała.s -->
+        <!-- !!!!!!!!!!!!!!!!!!!!! -->
+        <!-- Obecnie usunięte
+        disabled 
+        readonly
+        value="Elemelek"
+        required
+        -->
+        <!-- !!!!!!!!!!!!!!!!!!!!!!! -->
+        <!-- required - powoduje, że jeśli pole nie jest wypełnione, to wyświatla się informacja że jest wymagane i jest błąd ponieważ ni zostało wyświetlone -->
+        <!-- maxlngth - jewt to atrybut odpowiadający za ilość możliwych do wpisania znaków w dane pole -->
+        <!-- Autofocus powoduje ustawienie się kursora w danym polu po wejściu na stronę -->
+        <!-- pattern służy do implementowania regexów do danefo inputa, więcej o pattern pod linkiem:
+        https://www.w3schools.com/TAGS/att_input_pattern.asp-->
+        <!-- autocomplete - z automatu jest na "on" a umożliwia to przeglądarce dokańczanie zapamiętanych wcześniej wyrazów  -->
+        <input name="surname" type="text" placeholder="Wpisz Swoje Nazwisko" maxlength="20" autofocus pattern="[a-z0-9]{7,10}" autocomplete="off">
+        </br>
+        <!-- textarea - jest to pole tekstowe, w której możemy definiować  jej wielkość za pomodą rows i cols -->
+        <!--  Prócz podobnych atrybutów jak w inputach można tu również dodać atrybuty z góry określające wielkość wyświetlającego się obszaru tekstowego za pomocą:
+        rows = oznacza jakie wysokie ma się załadować
+        cols = oznacza jakie szerokie ma się wyświetlić -->
+        <!-- !!! Jednocześnie przegladarki umożliwiają dyanmiczne dostosowywanie wielkości okna tekstowego za pomocą myszki -->
+        <textarea cols="50" rows="5"></textarea>
+        <!-- Tylko na potrzeby sprawdzania co robią kolejne atrybuty teraz -->
+        <button>Wyślij formularz</button>
 
+
+    </form>
 </body>
 
 </html>
