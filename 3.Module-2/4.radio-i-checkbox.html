@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.Formularz - radio buttons and checkboxes</title>
+    <!-- Bookmark icon -->
+    <link rel="icon" href="./bookmark-icon/text-file.png" type="icon/png" />
+</head>
+
+<body>
+    <h1>
+        Podstawowe elementy formularza -
+        <em>Radio buttons / checkboxes</em>
+    </h1>
+    <!-- Basic form-->
+    <!-- 1. RADIO BUTTON -->
+    <!-- Aby wybierać tylko jeden radiobutton, to powinniśmy dodać im wszystkim tą samą nazwę -->
+    <!-- atrybut value umożliwia wysłąnie tych informacji po zatwierdzeniu formularza -->
+    <!-- checked - po załądowaniu strony dany radio button jest zaznaczony -->
+    <!-- !!! Uwaga aby kliknięcie na etykietę zadziałało to musimy każdy radiobutton zamknąć w osobnym tagu label -->
+    <!-- działa róœnież atrybut disabled,  który to wyłącza dany element z możliwości zaznaczenia-->
+    <!-- atrbut required  będzie działał jak do zwykłego inputa ale przypisany do jednego elementu działa na wszystkie w grupie wymagając jednego obojętnie jakiego zaznaczonego:) -->
+    <!-- Dziła również atrybuy auyofocus skupiający się na pierwszym elemencie w grupie po wczytaniu strony lub jej odświeżeniu -->
+    <form action="#">
+        Wybierz swoją ulubioną kuchnię <br />
+        <label>
+        <input type="radio" name="kitchen" value="Tajska" />Tajska
+      </label>
+        <br />
+        <label>
+        <input type="radio" name="kitchen" value="Japońska" />Japońska</label
+      ><br />
+      <label>
+        <input type="radio" name="kitchen" value="Węgierska" checked />Węgierska
+      </label>
+        <hr />
+        <br />
+        <!-- CHECKBOXES -->
+        <!-- Używa się ich głównie do zaznaczania kilku opcji - atrybuty mogą być dodawane takie same jak i do innych inputów - głównie checkboxów i nie przeszkadza tutaj to ze nazwę mają taką samą:)-->
+        <form>
+            Wybierz swoją ulubioną kuchnię <br />
+            <label>
+          <input type="checkbox" name="kitchen" value="Tajska" />Tajska
+        </label>
+            <br />
+            <label>
+          <input
+            type="checkbox"
+            name="kitchen"
+            value="Japońska"
+          />Japońska</label
+        ><br />
+        <label>
+          <input type="checkbox" name="kitchen" value="Węgierska" />Węgierska
+        </label>
+        </form>
+
+        <!-- Tylko na użytek tego formularzas -->
+        <br />
+        <hr />
+        <button>Wyślij</button>
+    </form>
+</body>
+
+</html>
