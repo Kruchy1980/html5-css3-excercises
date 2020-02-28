@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.Formularz - Typy inputów</title>
+    <!-- Bookmark icon -->
+    <link rel="icon" href="./bookmark-icon/text-file.png" type="icon/png" />
+</head>
+
+<body>
+    <h1>
+        Podstawowe elementy formularza -
+        <em>Typy inputów</em>
+    </h1>
+    <!-- Basic form-->
+    <form action="">
+        <!-- Zwykły tekstowy input -->
+        <input type="text" /> <br />
+        <!-- Hasłowy input -->
+        <input type="password" name="" id="" /> <br />
+        <!-- Input z wyborem koloru -->
+        <input type="color" name="color" /> <br />
+        <!-- Inputy daty - data i month mają możliwoś wprowadzenia minimalnej wartości daty od której możemy zacząć wybieranie i max do daty do której możemy wybierać-->
+        <!-- Input daty -->
+        <input type="date" name="date" min="2022-12-31" max="2023-01-01" /> <br />
+        <!-- Input tylko z miesiącem i dniem -->
+        <input type="month" name="month" /> <br />
+        <!-- Input czasu  - nie da się rady wysłać warości powyżej 16 dzięki atrybutowi max-->
+        <input type="time" name="time" max="16:00" /> <br />
+        <!-- Input file - załączania pliku  -->
+        <input type="file" name="file" lang="pl" /> <br />
+        <!-- Input ukryty  - używamy czasem by przekazać klucz lub jakąkolwiek inną ukrytą wartość umożliwiającą np identyfikację danych danych lub informację, która ma być niewidoczna przez usera-->
+        <input type="hidden" name="secret" value="super-top-secret" /> <br />
+        <!-- Inpur email -->
+        <input type="email" name="email" /> <br />
+        <!-- Input liczbowy atrybut step pozwala nam ustawić skok pomiędzy liczbami przewijanymi stzałkami i min maxem możemy sobię zaimplementować zakres-->
+        <input type="number" step="2" min="10" max="300" />
+        <hr />
+        <!-- Tylko na potrzeby tego formularza -->
+        <button>Wyślij</button>
+    </form>
+</body>
+
+</html>
