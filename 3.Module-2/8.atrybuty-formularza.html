@@ -15,7 +15,19 @@
         <em>Atrybuty Formularza</em>
     </h1>
     <!-- Basic form-->
-    <form action=""></form>
+    <!-- Action - odpowiada za ścieżkę na którą zostanie wysłany formularz -->
+    <!-- Metody wysyłania:
+    Get - jest zdefaultowana - jest to metoda jawna i najlepiej nie używać do wysyłani danych newralgicznych
+    POST - jest kolejną metodą wysyłania
+    DELETE - do kasowania danych danychn
+    PUT - dodawanie do istniejącej bazy danych
+    PATCH - nadpisywanie elemntów bazy danych -->
+    <!-- novalidate - nie sprawdza formularza -->
+    <!-- autocomplete="off" - możemy sobie spokojnie wyłączyć lub włączyć autouzupełnianie całego formularza -->
+    <form action="#" method="post" novalidate>
+        <input type="text" name="surname" />
+        <button>Wyślij</button>
+    </form>
 </body>
 
 </html>
