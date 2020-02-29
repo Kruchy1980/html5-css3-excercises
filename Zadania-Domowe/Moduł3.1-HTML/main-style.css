@@ -1,0 +1,126 @@
+/* form general  */
+
+#holidays {
+    width: 80%;
+    margin: 10px auto;
+}
+
+#holidays div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Inputs */
+
+
+/* Holidys inputs */
+
+#holidays input,
+#holidays textarea {
+    width: 100%;
+}
+
+
+/* Radio and checkbox from holidays */
+
+#holidays input[type="radio"],
+#holidays input[type="checkbox"] {
+    width: 10px;
+    display: block;
+    float: right;
+}
+
+
+/* Personal data */
+
+#personal-data strong,
+#trip strong,
+#information strong {
+    margin: 2% auto;
+    text-decoration: underline;
+}
+
+
+/* Trip and region radio and checkboxes */
+
+#trip {
+    /* width: 50%; */
+    margin: 4% auto;
+    padding: 2% 10%;
+    border-top: 5px double #000;
+    border-bottom: 5px double #000;
+}
+
+.region {
+    margin: 10px 0;
+}
+
+#trip input {
+    margin: 5px 0;
+}
+
+#trip .transport-main,
+#informations em,
+#information em {
+    display: block;
+    margin: 2% 0;
+    text-align: center;
+}
+
+#personal-data label {
+    padding-left: 1%;
+    width: 96%;
+}
+
+#personal-data input {
+    margin: 1%;
+}
+
+
+/* Main form */
+
+#main-holiday {
+    border: 1px solid #000;
+    background: radial-gradient(green, yellow);
+}
+
+
+/* Checkboxes */
+
+#informations,
+#information {
+    border-bottom: 5px double #000;
+    margin: 3px auto;
+    width: 98%;
+}
+
+#informations label {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 3%;
+}
+
+#information button {
+    margin-bottom: 3%;
+}
+
+#information input[type="file"] {
+    margin: 2% 0;
+}
+
+#information .inlab-radio {
+    width: 40%;
+    margin: 1% auto;
+}
+
+#information .mes {
+    width: 96%;
+    text-align: center;
+    margin: 2% auto;
+}
+
+footer {
+    text-align: center;
+}

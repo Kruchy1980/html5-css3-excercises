@@ -8,11 +8,13 @@
     <!-- Bookmark icon -->
     <link rel="icon" href="./bookmark-icon/text-file.png" type="icon/png" />
     <!-- Do drugiego formularza dodałem trochę styli aby go trochę podrasować :) -->
-    <link rel="stylesheet" href="./main-style.css">
+    <link rel="stylesheet" href="./main-style.css" />
 </head>
 
 <body>
-    <h1>Formularze Informacyjne - <em>wysyłanie get'em, bez adresu docelowego</em></h1>
+    <h1>
+        Formularze Informacyjne - <em>wysyłanie get'em, bez adresu docelowego</em>
+    </h1>
     <!-- Formularz starą metodą -->
     <h2>
         1. Czy Lubisz Poniedziałki ? - kliknij na odpowiednią etykietę aby się przenieść do edycji pola
@@ -22,8 +24,12 @@
       labelki zrobione są duże dla lepszego trafiania do celu :)</small
     >
     <form action="#">
-      <label for="firstName"><h1>Imię</h1></label>
-      <label for="lastName"><h1>Nazwisko</h1></label>
+      <label for="firstName" pattern="[a-zA-Z]{2,}" required
+        ><h1>Imię</h1></label
+      >
+      <label for="lastName" pattern="[a-zA-Z\-]{2,}" required
+        ><h1>Nazwisko</h1></label
+      >
       <label for="email"><h1>Email</h1></label>
       <label for="reason"><h1>Wybierz powód dlaczego nie lubisz</h1></label>
       <label for="choice"><h1>Wybierz powód max 3 za</h1></label>
@@ -36,76 +42,183 @@
     <input type="email" id="email" /><br />
     <small>Odpowiedni format emajla ;)</small><br />
     <hr />
-    <small>Wybierz <strong>
-      główny</strong> powód niezadowolenia z poniedziałków:</small>
+    <small>Wybierz <strong> główny</strong> powód niezadowolenia z
+        poniedziałków:</small
+      >
+      <hr />
+      <input type="radio" name="reason" id="reason" value="sleep" />Wcześnie
+      wstawać
+      <br />
+      <input type="radio" required name="reason" value="work" />Znowu do
+      pracy<br />
+      <input type="radio" name="reason" value="wife" />Żona szefa się wtrąca<br />
+      <input type="radio" name="reason" value="boring project" />Stary nudny
+      projekt znowu<br />
+      <hr />
+      <small>Wybierz <strong>powód/ody</strong> za poniedziałkiem:</small>
     <hr />
-    <input type="radio" name="reason" id="reason" value="sleep" />Wcześnie wstawać
-    <br />
-    <input type="radio" required name="reason" value="work" />Znowu do pracy<br />
-    <input type="radio" name="reason" value="wife" />Żona szefa się wtrąca<br />
-    <input type="radio" name="reason" value="boring project" />Stary nudny projekt znowu<br />
-    <hr />
-    <small>Wybierz <strong>powód/ody</strong> za poniedziałkiem:</small>
-    <hr>
     <input type="checkbox" required name="like" id="choice" value="team" />Wspaniała ekipa<br />
     <input type="checkbox" name="like" value="improvement" />Kolejne możliwości samorozwoju<br />
     <input type="checkbox" name="like" value="ideas" />Możliwość wprowadzenia nowych rozwiązań do projektu przez cały tydzień<br />
-    <input type="checkbox" name="like" value="soccer" />Piłkarzyki w pracy;)<br />
+    <input type="checkbox" name="like" value="soccer" />Piłkarzyki w pracy;)
+    <br />
     <hr />
     <!-- Użyty tutaj css jest jedynym w tym formularzu i tylko po to aby drobne informacje w odniesieniu do textarea pokazały się nad inputem a nie w jego lewym dolnym polu -->
-    <small style="display:block;"><strong>Uzasadnij</strong> swoje wybory:</small>
-    <textarea name="messsage " id="description " rows="5" cols="30" placeholder="Tutaj opisz swoje wybory... "></textarea> <br />
+    <small style="display:block;"><strong>Uzasadnij</strong> swoje wybory:</small
+      >
+      <textarea
+        name="messsage "
+        id="description "
+        rows="5"
+        cols="30"
+        placeholder="Tutaj opisz swoje wybory... "
+      ></textarea>
+      <br />
 
-    <!-- Przyciski do pierwszego formularza -->
-    <button type="reset ">Wyczyść Formularz</button>
-    <button>Wyślij Formularz</button>
+      <!-- Przyciski do pierwszego formularza -->
+      <button type="reset">Wyczyść Formularz</button>
+      <button>Wyślij Formularz</button>
+      <hr />
+    </form>
+    <!-- New Separate Form -->
+    <section id="holidays">
+      <br />
+      <!-- Formularz nową metodą -->
+      <h2>2. Gdzie chciałbyś/chciałabyś wyjechać na wakacje i dlaczego?</h2>
+      <hr />
+      <form action="mailto:jakub.kruszynski@vp.pl" id="main-holiday">
+        <div id="personal-data">
+          <strong>Dane Osobowe:</strong>
+          <label
+            ><em>Imię:</em>
+            <input type="text" placeholder="Podaj swoje imię..." autofocus />
+          </label>
+          <label
+            ><em>Nazwisko:</em>
+            <input type="text" placeholder="Podaj swoje Nazwisko..." />
+          </label>
+          <label
+            ><em>E-mail:</em>
+            <input
+              type="email"
+              placeholder="Podaj swojego e-maila..."
+              required
+            />
+          </label>
+          <label
+            ><em> Podaj hasło w celu potwierdzenia tożsamości:</em>
+            <input
+              type="password"
+              placeholder="Wprowadź swoje hasło..."
+              autocomplete="off"
+              required
+            />
+          </label>
+        </div>
 
-    <section id="wakacje">
-        <hr />
-        <br />
-        <!-- Formularz nową metodą -->
-        <h2>2. Gdzie chciałbyś/chciałabyś wyjechać na wakacje i dlaczego?</h2>
-        <hr>
-        <form action="#" autofocus>
-            <div id="personal-data"><strong>Dane Osobowe:</strong>
-                <label><em>Imię:</em>
-          <input type="text" placeholder="Podaj swoje imię...">
-        </label>
-                <label><em>Nazwisko:</em>
-          <input type="text" placeholder="Podaj swoje Nazwisko...">
-        </label>
-                <label><em>E-mail:</em>
-          <input type="email" placeholder="Podaj swojego e-maila..." required>
-        </label>
-                <label><em>
-          Podaj hasło w celu potwierdzenia tożsamości:</em>
-          <input type="password" placeholder="Wprowadź swoje hasło..." autocomplete="off" required>
-        </label>
-            </div>
-            <hr>
-            <div id="trip"><strong>Miejsce i okres wyjazdu:</strong>
-                <label>Wybierz kraj:
-              <select name="country">
-                <option value="Norway">Norwegia</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-              </select>
-            </label>
-                <label></label>
-                <label></label>
-                <label></label>
-                <label></label>
-                <label></label>
-            </div>
-        </form>
+        <div id="trip">
+          <strong>Miejsce i okres wyjazdu:</strong>
+          <label
+            >Wybierz kraj:
+            <select name="country">
+              <option value="Norway">Norwegia</option>
+              <option value="Spain">Hiszpania</option>
+              <option value="Usa">USA</option>
+              <option value="Brasil">Braylia</option>
+              <option value="Tailand">Tajlandia</option>
+              <option value="Egipt">Egipt</option>
+              <option value="Croatia">Chorwacja</option>
+              <option value="Finland">Finlandia</option>
+              <option value="Iceland">Islandia</option>
+              <option value="China" disabled
+                >Chiny <small> - Obecnie poza ofrtą</small></option>
+    </select>
+    </label>
+    <label class="region">Wybierz rejon:
+            <select name="region" multiple>
+              <option value="Gdziekolwiek">Gdziekolwiek</option>
+              <option value="Północ Kraju">Północ Kraju</option>
+              <option value="Południe Kraju">Południe Kraju</option>
+              <option value="Zachód Kraju">Zachód Kraju</option>
+              <option value="Wschód Kraju">Wschód Kraju</option>
+            </select>
+          </label>
+    <label>Termin wyjazdu :
+            <input type="date" name="date" min="29-02-2020" />
+          </label>
+    <label>Długość wyjazdu:
+            <input type="month" name="month" />
+          </label>
+    <!-- TRANSPORT -->
+    <em class="transport-main">Rodzaj transportu:</em>
+    <label>
+            <input type="radio" name="transport" value="self" required />Własny
+            transport
+          </label>
+    <label>
+            <input type="radio" name="transport" value="flight" />Samolot
+          </label>
+    <label>
+            <input type="radio" name="transport" value="Bus" />Autokar
+          </label>
+    <label>
+            <input type="radio" name="transport" value="Bicycle" />Rower
+          </label>
+    <label>
+            <input
+              type="radio"
+              name="transport"
+              value="Pilgrimage"
+            />Pielgrzymka na kolanach
+          </label>
+    </div>
+    <div id="informations">
+        <em>Wybierz opcje dodatkowe:</em>
+        <label>
+            <input type="checkbox" name="option" value="food" />Wyżywienie
+          </label>
+        <label>
+            <input type="checkbox" name="option" value="live" />Zakwaterowanie
+          </label>
+        <label>
+            <input type="checkbox" name="option" value="toilet" />Toaleta
+          </label>
+        <label>
+            <input type="checkbox" name="option" value="Hotel or flat" />Hotel
+            czy mieszkanie
+          </label>
+        <label>
+            <input type="checkbox" name="option" value="Own Food" />Wyżywienie
+            własne
+          </label>
+    </div>
+    <div id="information">
+        <strong>Dane Informacyjne:</strong>
+        <em>Czy kiedykolwiek byłeś już w tym rejonie??</em>
+        <label class="inlab-radio">
+            <input type="radio" name="presence" value="Yes" />TAK
+          </label>
+        <label class="inlab-radio">
+            <input type="radio" name="presence" value="No" />NIE
+          </label>
+        <label class="mes">Jeśli zaznaczyłeś/aś odpowiedż 'TAK' to napisz nam kilka zdań o
+            Twoim pobycie
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </label>
+        <label>I dodaj jakieś zdjęcie z pobytu
+            <input lang="pl" type="file" />
+          </label>
+        <button type="reset">Wyczyść Formularz</button>
+        <button>Wyślij Formularz</button>
+    </div>
+    </form>
     </section>
+    <footer>&copy; Made by Jakub Kruszyński</footer>
 </body>
 
 </html>
