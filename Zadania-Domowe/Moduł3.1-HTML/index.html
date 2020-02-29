@@ -98,7 +98,7 @@
             <input type="text" placeholder="Podaj swoje Nazwisko..." />
           </label>
           <label
-            ><em>E-mail:</em>
+            ><em>E-mail: <sup>*</sup></em>
             <input
               type="email"
               placeholder="Podaj swojego e-maila..."
@@ -106,7 +106,7 @@
             />
           </label>
           <label
-            ><em> Podaj hasło w celu potwierdzenia tożsamości:</em>
+            ><em> Podaj hasło w celu potwierdzenia tożsamości: <sup>*</sup></em>
             <input
               type="password"
               placeholder="Wprowadź swoje hasło..."
@@ -150,7 +150,7 @@
             <input type="month" name="month" />
           </label>
     <!-- TRANSPORT -->
-    <em class="transport-main">Rodzaj transportu:</em>
+    <em class="transport-main">Rodzaj transportu: <sup>*</sup></em>
     <label>
             <input type="radio" name="transport" value="self" required />Własny
             transport
@@ -173,9 +173,14 @@
           </label>
     </div>
     <div id="informations">
-        <em>Wybierz opcje dodatkowe:</em>
+        <em>Wybierz opcje dodatkowe: <sup>*</sup></em>
         <label>
-            <input type="checkbox" name="option" value="food" />Wyżywienie
+            <input
+              type="checkbox"
+              name="option"
+              value="food"
+              required
+            />Wyżywienie
           </label>
         <label>
             <input type="checkbox" name="option" value="live" />Zakwaterowanie
