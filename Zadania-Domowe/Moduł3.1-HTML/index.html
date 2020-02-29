@@ -7,13 +7,15 @@
     <title>8.Formularz - Praca Domowa</title>
     <!-- Bookmark icon -->
     <link rel="icon" href="./bookmark-icon/text-file.png" type="icon/png" />
+    <!-- Do drugiego formularza dodałem trochę styli aby go trochę podrasować :) -->
+    <link rel="stylesheet" href="./main-style.css">
 </head>
 
 <body>
-    <h1>Formularze Informacyjne - <em>bez wysyłania</em></h1>
+    <h1>Formularze Informacyjne - <em>wysyłanie get'em, bez adresu docelowego</em></h1>
     <!-- Formularz starą metodą -->
     <h2>
-        Czy Lubisz Poniedziałki ? - kliknij na odpowiednią etykietę aby się przenieść do edycji pola
+        1. Czy Lubisz Poniedziałki ? - kliknij na odpowiednią etykietę aby się przenieść do edycji pola
     </h2>
     <small>Uwaga w tym formularzu specjalnie zastosowałem w innym miejscu zestaw
       labelek i osobno inputy tylko po to aby się pobawić HTML-em trochi a
@@ -23,34 +25,87 @@
       <label for="firstName"><h1>Imię</h1></label>
       <label for="lastName"><h1>Nazwisko</h1></label>
       <label for="email"><h1>Email</h1></label>
-      <label for="reason"><h1>Zaznacz powód dlaczego nie lubisz</h1></label>
+      <label for="reason"><h1>Wybierz powód dlaczego nie lubisz</h1></label>
       <label for="choice"><h1>Wybierz powód max 3 za</h1></label>
       <label for="description"><h1>Opisz trochę swoje wybory</h1></label>
       <!-- Inputy do formularza -->
-      <input type="text" /><br />
+      <input type="text" id="firstName" /><br />
       <small>Tylko litery</small><br />
-    <input type="text" /><br />
+    <input type="text" id="lastName" /><br />
     <small>Tylko litery i myślnik</small><br />
-    <input type="email" /><br />
+    <input type="email" id="email" /><br />
     <small>Odpowiedni format emajla ;)</small><br />
-    <input type="radio" name="reason" /><br />
-    <input type="radio" name="reason" /><br />
-    <input type="radio" name="reason" /><br />
-    <input type="radio" name="reason" /><br />
-    <input type="checkbox" name="like" id="" /><br />
-    <input type="checkbox" name="like" id="" /><br />
-    <input type="checkbox" name="like" id="" /><br />
-    <input type="checkbox" name="like" id="" /><br />
-    <textarea name="" id="" rows="10"></textarea> <br />
+    <hr />
+    <small>Wybierz <strong>
+      główny</strong> powód niezadowolenia z poniedziałków:</small>
+    <hr />
+    <input type="radio" name="reason" id="reason" value="sleep" />Wcześnie wstawać
+    <br />
+    <input type="radio" required name="reason" value="work" />Znowu do pracy<br />
+    <input type="radio" name="reason" value="wife" />Żona szefa się wtrąca<br />
+    <input type="radio" name="reason" value="boring project" />Stary nudny projekt znowu<br />
+    <hr />
+    <small>Wybierz <strong>powód/ody</strong> za poniedziałkiem:</small>
+    <hr>
+    <input type="checkbox" required name="like" id="choice" value="team" />Wspaniała ekipa<br />
+    <input type="checkbox" name="like" value="improvement" />Kolejne możliwości samorozwoju<br />
+    <input type="checkbox" name="like" value="ideas" />Możliwość wprowadzenia nowych rozwiązań do projektu przez cały tydzień<br />
+    <input type="checkbox" name="like" value="soccer" />Piłkarzyki w pracy;)<br />
+    <hr />
+    <!-- Użyty tutaj css jest jedynym w tym formularzu i tylko po to aby drobne informacje w odniesieniu do textarea pokazały się nad inputem a nie w jego lewym dolnym polu -->
+    <small style="display:block;"><strong>Uzasadnij</strong> swoje wybory:</small>
+    <textarea name="messsage " id="description " rows="5" cols="30" placeholder="Tutaj opisz swoje wybory... "></textarea> <br />
 
     <!-- Przyciski do pierwszego formularza -->
-    <button type="reset">Wyczyść Formularz</button>
+    <button type="reset ">Wyczyść Formularz</button>
     <button>Wyślij Formularz</button>
-    </form>
-    <hr />
-    <br />
-    <!-- Formularz nową metodą -->
-    <h2>Gdzie chciałbyś/chciałabyś wyjechać na wakacje i dlaczego</h2>
+
+    <section id="wakacje">
+        <hr />
+        <br />
+        <!-- Formularz nową metodą -->
+        <h2>2. Gdzie chciałbyś/chciałabyś wyjechać na wakacje i dlaczego?</h2>
+        <hr>
+        <form action="#" autofocus>
+            <div id="personal-data"><strong>Dane Osobowe:</strong>
+                <label><em>Imię:</em>
+          <input type="text" placeholder="Podaj swoje imię...">
+        </label>
+                <label><em>Nazwisko:</em>
+          <input type="text" placeholder="Podaj swoje Nazwisko...">
+        </label>
+                <label><em>E-mail:</em>
+          <input type="email" placeholder="Podaj swojego e-maila..." required>
+        </label>
+                <label><em>
+          Podaj hasło w celu potwierdzenia tożsamości:</em>
+          <input type="password" placeholder="Wprowadź swoje hasło..." autocomplete="off" required>
+        </label>
+            </div>
+            <hr>
+            <div id="trip"><strong>Miejsce i okres wyjazdu:</strong>
+                <label>Wybierz kraj:
+              <select name="country">
+                <option value="Norway">Norwegia</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+              </select>
+            </label>
+                <label></label>
+                <label></label>
+                <label></label>
+                <label></label>
+                <label></label>
+            </div>
+        </form>
+    </section>
 </body>
 
 </html>
