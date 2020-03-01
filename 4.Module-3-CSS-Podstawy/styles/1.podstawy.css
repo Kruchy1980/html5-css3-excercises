@@ -1,0 +1,54 @@
+/* The header only */
+
+body {
+    margin: 0;
+}
+
+.header {
+    margin: 0;
+    border-bottom: 1px solid #000;
+    padding: 0.5em 0;
+    background-color: #777;
+    color: #eee;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+
+/* Main content of the task */
+
+
+/* Turn every text except the header on the red color */
+
+
+/* section {
+    color: #ff0000;
+} */
+
+
+/* Only first heder of section is red  */
+
+section h1:first-child {
+    color: #ff0000;
+}
+
+
+/* And the second / last header of section is green */
+
+section h1:last-of-type {
+    color: #00ff00;
+}
+
+
+/* The heder with the id header only gets the blue color */
+
+#header {
+    color: #0000ff;
+}
+
+
+/* The general selector which will change all the styles of all elements in document */
+
+* {
+    font-size: 1.5rem;
+}
