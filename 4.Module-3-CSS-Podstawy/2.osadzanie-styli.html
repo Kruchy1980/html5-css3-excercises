@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.Osadzanie styli w HTML'u</title>
+    <link rel="icon" href="./bookmark-icon/css.png" type="icon/png" />
+    <link rel="stylesheet" href="./styles/2.osadzanie-styli.css" />
+
+    <style>
+        h2:first-of-type {
+            color: #ff0000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="header">Osadzanie styli w HTML'u</h1>
+    <section class="main">
+        <h2>Pierwszy sposób</h2>
+        <p>Style można dodawać w pliku .html za pomocą znacznika <pre> <span><</span>style> <span><</span>/style</style><span>></span> </pre> zamieszczonegow znaczniku <pre><span><</span>head> <span><</span>/head></pre> dokumentu html - <em> nie jest to jednak metoda zalecana w obecnych czasach z powodu niepotrzebnego obciążania dokumentu html
+       </p>
+        <h2 style="color: #00ff00;">Drugi sposób</h2>
+        <p>
+            Style można implementować/osadzać inlineow'o w danym tagu, co czyni je najmocniejszymi w hierarhi implementacjia, przkład:
+            < p <strong> style="color: orangered;" </strong>>Nasz tekst
+                < /p> Co da nam następujący efekt:
+        </p>
+
+        <pre><p style="color: orangered;">Nasz tekst</p></pre> co jednak również nie jest zalecane przy tworzeniu pliku HTML, a można to zastąpić za pomocą atrybutu <strong>!important</strong> w kodzie CSS przy wartości atrybutu, powodując go byciem najważniejszym
+        ze wszystkich styli i nienadpisywalnym, do jednak również stosuje się bardzo rzadko ze względu na ograniczenia które to on powoduje przy updatowaniu/rozwijaniu stron HTML.
+
+        <h2>Trzeci sposób</h2>
+        <p>
+            Przyjętym za najlepszy sposób jest stylizowanie elementów html w osobnym pliku, a następnie dołączenia do znacznika <strong>head</strong> linku do tego pliku, np:
+            <pre>< link rel="stylesheet" href="./styles/2.osadzanie-styli.css" />
+            gdzie:
+                <em>rel</em> - jest to rodzaj powiązanie/relationship z naszym dokumentem html, a <em> stylesheet</em> jest to
+            <em>href</em> - odpowiada za ścieżkę do tego pliku - tutaj pokazana jest tylko przykładowa ścieżka.
+            </pre>
+
+        </p>
+    </section>
+</body>
+
+</html>
