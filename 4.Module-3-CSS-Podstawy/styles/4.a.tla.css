@@ -1,0 +1,41 @@
+/* The header only */
+
+body {
+    margin: 0;
+    background-color: #ccc;
+}
+
+.header {
+    margin: 0;
+    border-bottom: 1px solid #000;
+    padding: 0.5em 0;
+    background-color: #777;
+    color: #eee;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+
+/* Div styles */
+
+section div {
+    margin-top: 10px;
+    height: 300px;
+    /* Ustawienie obrmowania */
+    border: 10px #00ff00 dotted;
+    /* Inne style  */
+    padding: 10px;
+    /* Ustawianie koloru tła */
+    background-color: #888;
+    /* Ustawienie obrazka jako tło i drugiego obrazka na nim */
+    overflow: auto;
+    background-image: url('../images/jezioro.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    /* Określenie obrazka w stosunku do całości kontentu */
+    background-origin: content-box;
+    /* Ustawienie tła w odniesieniu do całosci kontentu */
+    background-clip: border-box;
+}
