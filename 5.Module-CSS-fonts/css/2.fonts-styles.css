@@ -28,5 +28,32 @@ div {
     text-align: justify;
     /* Tekst wyjustowany justified */
     /* Decoration of text */
-    text-decoration: dotted;
+    text-decoration: underline;
+    /* decoration o text decoration */
+    text-decoration-color: #deff00;
+    /* style of text decoration */
+    text-decoration-style: wavy;
+    /* shorthand - just other example will work because is codec as the last line of code*/
+    text-decoration: line-through #ff0000 dotted;
+    /* styling of text dimensions */
+    text-transform: capitalize;
+    /* only the first letters will be uppercased*/
+    /* text-transform: lowercase; all of the letters will be lowercased */
+    /* text-transform: uppercase; all of the letters will be uppercased */
+    /* text indents - the first line of every paragaph */
+    text-indent: 25px;
+}
+
+
+/* text shadow - done only with the second div */
+
+div:nth-of-type(2) {
+    color: #777;
+    /* disabling text decoration */
+    text-decoration: none;
+    /* change the background of box */
+    background-color: #deff4466;
+    /* text shadow */
+    /* 1par = offset right, 2par = offset down, 3par =  blur, par color after coma we can add the second shadow as shown below - Attention - the second shadow does not need to have all the parameters if we won't give any than it will be borrowed from first shadow*/
+    text-shadow: 3px 4px 5px #ce2527, -6px 0 2px;
 }
