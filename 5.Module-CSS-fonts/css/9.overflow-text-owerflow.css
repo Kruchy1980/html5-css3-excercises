@@ -1,0 +1,51 @@
+/* The header only */
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    margin: 0;
+    border-bottom: 1px solid #000;
+    padding: 0.5em 0;
+    background-color: #777;
+    color: #eee;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+
+/* Elements styling */
+
+
+/* main box - div */
+
+div {
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000;
+    /* condition needed for text overflow */
+    overflow: hidden;
+    /* resize: both; */
+    /* will see only the content which is fitted to container our div*/
+    /* overflow: hidden;  */
+    /* overflow: scroll; */
+    /* scroll is all the time both dimension scroll */
+    /* overflow: auto; */
+    /* Auto is displaying the scroll if there is need for it */
+    /* for vertical or horizontal only scroll visible */
+    /* overflow-y: hidden;
+    overflow-x: scroll; */
+    /* or other direcrion */
+    /* overflow-y: scroll;
+    overflow-x: hidden; */
+    /* text overflow different types */
+    /* text-overflow: clip; */
+    text-overflow: ellipsis;
+    /* text-overflow: clip; */
+    /* just for the lesson with text overflow */
+    /* condition needed for text overflow */
+    white-space: nowrap;
+}
