@@ -1,0 +1,114 @@
+/* The header only */
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    margin: 0;
+    border-bottom: 1px solid #000;
+    padding: 0.5em 0;
+    background-color: #777;
+    color: #eee;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+
+/* Elements styling */
+
+
+/* div style just for part of this lesson */
+
+div {
+    height: 70vh;
+    /* just for this lesson */
+    background-color: #aaa;
+}
+
+
+/* Main paragraphs */
+
+p {
+    border: 2px solid #000;
+    background: #bbb;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    /* for the purpose of z-index showing */
+    position: relative;
+    z-index: 5;
+}
+
+
+/* Second pargraph styling */
+
+
+/* p:nth-of-type(2) {
+    background: #fff; */
+
+
+/* with position relative the element is stil integral part of the document */
+
+
+/* position: relative; */
+
+
+/* position absolute is removing the element from the casual document content - we can treat it like the next layer*/
+
+
+/* position: absolute; */
+
+
+/* right: 50px; */
+
+
+/* position: sticky; */
+
+
+/* sticky is responsible for setting the position of element in the fixed distances from the top of the page for example for moveble navbars if the element is sticked to the main part of page*/
+
+
+/* top: 50px;
+    left: 50px;
+} */
+
+
+/* fot the purpose of that lesson we will use for the z index possibilities shoe */
+
+p:nth-of-type(2) {
+    background-color: #fff;
+    position: absolute;
+    top: 120px;
+    left: 50px;
+    margin: 0;
+    line-height: 5;
+    /* if it is larger than it is more valuated */
+    /* if the z indexes are equal than the code is more valuable when is executed as the last */
+    z-index: 5;
+}
+
+
+/* visibility hidden */
+
+p:nth-of-type(1) {
+    visibility: hidden;
+    /* visibility: collapse; */
+    /* visibility: visible; */
+}
+
+
+/* Table styling */
+
+td {
+    border: 1px solid #000;
+}
+
+
+/* hiding second cell of table */
+
+td:nth-of-type(2) {
+    visibility: hidden;
+}
