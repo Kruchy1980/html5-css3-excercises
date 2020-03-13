@@ -13,3 +13,22 @@ header {
     text-align: center;
     border-radius: 0 0 20px 20px;
 }
+
+
+/* Main content styles */
+
+
+/* image style */
+
+img {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    /* Avoiding of unnecessary streching of image */
+    /* object-fit: contain; */
+    object-fit: cover;
+    /* Positioning of image 1par = left/right 2 par = top/bottom */
+    /* object-position: 60px 30%; */
+    object-position: center;
+}
