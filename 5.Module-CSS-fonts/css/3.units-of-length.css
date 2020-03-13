@@ -1,0 +1,62 @@
+/* The header only */
+
+body {
+    margin: 0;
+}
+
+header {
+    margin: 0;
+    border-bottom: 1px solid #000;
+    padding: 0.5em 0;
+    background-color: #777;
+    color: #eee;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+
+/* Main div style */
+
+div {
+    margin: 20px;
+}
+
+
+/* There are 3 groups of units every paragraph is implemented by one group */
+
+
+/* 1st group absolute units of length */
+
+div:nth-of-type(1) {
+    background-color: #ff0000;
+    color: #000;
+    /* absolute units px, cm, mm, points - except of px the rest is usable very rare */
+    width: 300px;
+}
+
+
+/* 2nd group font dimensions units of length */
+
+div:nth-of-type(2) {
+    background-color: #00ff00;
+    color: #555;
+    /* we havee em or rem */
+    /* first we need to declare the basic size of fonts */
+    font-size: 8px;
+    /* Than we can use the em knowing that 1 em = 8px so 50em = 400px*/
+    width: 50em;
+    height: 20rem;
+    /* It depends of root main unit set - we can change it in html tag but need to remeber that the basic dimenion in document is set from 14-18px */
+    /* Attension the difference of em and rem is that rem calculates the dimensions from root of document and the em calculates it from parent element */
+}
+
+
+/* 3rd group units dependend of screen dimensions */
+
+div:nth-of-type(3) {
+    background-color: #0000ff;
+    color: #fff;
+    /* vw = view width, vh = view height  - vmax and vmin - it means that the larger or smaller of value will be used (value from width or height*/
+    width: 50vw;
+    height: 10vh;
+}
