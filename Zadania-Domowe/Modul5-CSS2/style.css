@@ -41,14 +41,24 @@ header {
     white-space: nowrap;
     text-overflow: ellipsis;
     line-height: 40px;
+    box-shadow: -3px -3px 3px 1px #777;
 }
 
 
 /* indented */
 
 .indented {
-    width: 43vw;
+    position: relative;
+    top: -5px;
+    left: 60px;
+    width: 40vw;
+    height: 400px;
     text-indent: 30px;
+    border: 1px solid #ccc;
+    box-shadow: -3px -3px 3px 1px #777;
+    line-height: 2;
+    text-align: justify;
+    word-spacing: -2px;
 }
 
 
@@ -71,9 +81,9 @@ header {
 
 .stylized {
     resize: both;
-    position: relative;
-    top: -31px;
-    left: 72px;
+    position: absolute;
+    top: 410px;
+    left: 135px;
     border: 3px solid #000;
     width: 70%;
     background-color: #0000ff;
@@ -87,34 +97,33 @@ header {
 /* display prev */
 
 .codedisplay {
+    position: relative;
+    top: -98px;
+    left: 20px;
     font-family: monospace;
     background-color: #000;
     text-align: left;
     color: #fff;
-    width: 80%;
-    /* text-align: left; */
-    /* margin: 50px; */
-    /* margin-right: 300px; */
-    /* padding-right: 106px; */
-    /* margin-left: -30px; */
-    margin: 0 -50px;
+    width: 40%;
+    font-size: 12px;
 }
 
 
 /* comment */
 
 .commented {
-    margin: 0;
+    padding: 5px;
     color: #666;
-    white-space: pre;
 }
 
 
 /* nopre */
 
 .nopre {
+    position: relative;
+    top: -10px;
+    left: -80px;
+    white-space: pre;
     text-align: left;
     color: #fff;
-    margin: 0;
-    white-space: pre;
 }

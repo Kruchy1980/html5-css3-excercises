@@ -1,44 +1,9 @@
-/* The header only */
-
-body {
-    margin: 0;
-    box-sizing: border-box;
-}
-
-header {
-    margin: 0;
-    border-bottom: 1px solid #000;
-    padding: 0.5em 0;
-    background-color: #777;
-    color: #eee;
-    text-align: center;
-    border-radius: 0 0 20px 20px;
-}
-
-
-/* Elements styling */
-
-div {
-    margin: 20px;
-}
-
-
-/* paragraph */
-
-p:nth-of-type(1) {
-    /* white spaces */
-    /* white-space: nowrap; */
-    /* There is no text wrapping */
-    /* but the most used is if any than pre - which is responsible for reading all the white spaces in tect using specially in quoting any part of code for example */
-    white-space: pre;
-    /* no wrapping but evry white space is interpreted */
-    /* white-space: pre-line; */
-    /* every line wrapping */
-    /* white-space: pre-wrap; */
-    /* with wrapping */
-}
-
-
+<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>10.Homework</title><!-- bookmark icon --><link rel="icon" href="./bookmark-icon/typography.png" type="icon/png"><!-- Styles --><link rel="stylesheet" href="./style.css"><!-- Extended font declaration - styles imported/ one way from fonts.google.com--><link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,600,800&display=swap&subset=latin-ext" rel="stylesheet"></head><body><header><h1>Homework module 6 CSS-2</h1></header><div class="ellipsed">Tego tekstu nie widać w całości ponieważ się nie zmieścił. </div><div class="indented">Wszystkie teksty na tej stronie są napisane czczionką Roboto-Slab od Google. Większość 20px. Tego zdania nie da się zaznaczyć. Ten element jest szeroki na 43% szerokości viewport. <span class="bolded">Ten tekst jest pogrubiony,
+zwróć uwagę na to przy wstawianiu czionki z Google'a</span>.
+ Jak widzisz wiersze są od siebie oddalone <span class="underlined">bardziej niż zwykle.</span></div><textarea class="stylized">ten tekst w html jest napisany małymi literami,
+a wyświetla się wielkimi. Użytkownik może zmienić wielkość tego elementu</textarea><div class="codedisplay"><div class="commented">&lt;
+!-- to jest przykład kodu bez użycia znacznika &ltpre&gt;
+--></div><div class="nopre"><div><img src="/some_img" alt="anything"></div></div></div></body></html>
 /* second paragraph other properties */
 
 p:nth-of-type(2) {
