@@ -1,0 +1,166 @@
+/* The header only */
+
+body {
+    margin: 0;
+}
+
+header {
+    margin: 0;
+    border-bottom: 1px solid #000;
+    padding: 0.5em 0;
+    background-color: #777;
+    color: #eee;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+
+/* Leture styles */
+
+
+/* first line */
+
+p.one::first-line {
+    font-weight: bold;
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+
+/* first letter */
+
+p.one::first-letter {
+    text-shadow: 2px 2px 3px #222222;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+
+/* Text selection  for the text we will select*/
+
+p.one::selection {
+    text-shadow: 3px 3px 5px #00ff00;
+    background-color: #333;
+    color: #ccc;
+}
+
+
+/* Placeholder style */
+
+p input::placeholder {
+    color: #00ff00;
+    background-color: #000;
+    font-weight: bold;
+}
+
+
+/* After and before elements myClass a-and-b */
+
+
+/* Just for this task */
+
+.a-and-b p {
+    position: relative;
+}
+
+.a-and-b p::before {
+    /* content: "- można wstawić tuaj pojedynczy string lub cokolwiek co chcemy  ";
+     */
+    /* lub też pusty string i wtedy */
+    content: "👕 ";
+    /* But we can add something else using positions for main paragraph for exzmple relativee and absolute for paragraph before */
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #aaa;
+    z-index: -1;
+}
+
+
+/* Quotes stylisation */
+
+.a-and-b p {
+    quotes: "< " " >" "<< " " >>";
+}
+
+.a-and-b p::before {
+    content: open-quote;
+}
+
+.a-and-b p::after {
+    content: close-quote;
+    content: attr(lang);
+}
+
+.a-and-b span::before {
+    content: open-quote;
+}
+
+.a-and-b span::after {
+    content: close-quote;
+}
+
+
+/* The contents may be even image. or attributes */
+
+.attrib p:after {
+    content: attr(lang);
+}
+
+
+/* COUNTER ADD CONTENT COUNTER TO ELEMENTS */
+
+
+/* We need to tell when the counter should increment */
+
+
+/* .counters h2 {
+    counter-increment: cokolwiek;
+}
+
+
+ counter for h2
+
+.counters h2::before {
+    content: counter(cokolwiek) ". ";
+}
+
+
+counters fot h3
+
+.counters h3 {
+    counter-increment: sub-cokolwiek;
+}
+
+.counters h3::before {
+    content: counter(cokolwiek) " ." counter(sub-cokolwiek) " ";
+} */
+
+
+/* Easier way to do it  - for exzmplet two sections*/
+
+h3::before,
+h4::before {
+    content: counters(header, ".") ". ";
+}
+
+
+/* Now we can to each of secition increment header */
+
+section {
+    counter-increment: header;
+}
+
+
+/* and every h3 which is first of type will reset our counter header - to calculate from the beginning */
+
+h4:first-of-type {
+    counter-reset: header;
+}
+
+h3 {
+    counter-increment: header;
+}
