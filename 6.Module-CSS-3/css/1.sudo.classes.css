@@ -1,0 +1,252 @@
+/* The header only */
+
+body {
+    margin: 0;
+}
+
+header {
+    margin: 0;
+    border-bottom: 1px solid #000;
+    padding: 0.5em 0;
+    background-color: #777;
+    color: #eee;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+
+/* Leture styles */
+
+div {
+    margin-top: 20px;
+    height: 200px;
+    background: #eee;
+}
+
+
+/* Sudo Classes to div */
+
+
+/* 1. hover - when mouse over element what will happen */
+
+div:hover {
+    background: #ff0000;
+}
+
+
+/* First paragraph - choosing elements*/
+
+
+/* first */
+
+p:first-child {
+    background: #ccc;
+}
+
+
+/* last */
+
+p:last-child {
+    background-color: #000;
+    color: #fff;
+}
+
+
+/* Choosing elements inside the other elements of the same box */
+
+
+/* first */
+
+h2:first-of-type {
+    background-color: #00ffff;
+}
+
+
+/* last */
+
+h2:last-of-type {
+    background-color: #ff4500;
+}
+
+
+/* More specified selectors created with class */
+
+
+/* from table */
+
+
+/* tabe margin */
+
+table {
+    margin-top: 10px;
+}
+
+
+/* every second element */
+
+tr:nth-child(2n) {
+    background-color: #aaa;
+}
+
+
+/* even or odd element */
+
+tr:nth-child(odd) {
+    background-color: #11fffa;
+}
+
+
+/* from the back */
+
+tr:nth-last-child(4) {
+    color: #fff;
+}
+
+tr:nth-last-of-type(2) {
+    color: #ff0000;
+}
+
+
+/* Only child  eg for table with one only cell*/
+
+
+/* the same with only of type */
+
+td:only-child {
+    width: 180px;
+    background-color: #f022fc;
+}
+
+
+/* LINK STYLING */
+
+
+/* hover */
+
+
+/* a:hover {
+    color: red;
+} */
+
+
+/* visited - the links which are already visited very rare to use because of attribute restrictions*/
+
+
+/* If we want hover to work we need ot move it below */
+
+
+/* link these sites  which were not visited at all should be on top*/
+
+
+/* that is the proper queue if we want them to work fine */
+
+.links-grouop-one a:link {
+    color: #ffff00;
+}
+
+.links-grouop-one a:visited {
+    color: #00ff00;
+}
+
+.links-grouop-one a:hover {
+    color: #ff0000;
+}
+
+
+/* active is working when we are pushing the link*/
+
+.links-grouop-one a:active {
+    color: #000;
+}
+
+
+/* Form styling */
+
+
+/* form in general */
+
+form {
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+}
+
+
+/* inputs and select */
+
+input,
+select {
+    border: 1px solid #aaa;
+}
+
+
+/* disabled inputs - mainly used*/
+
+input:disabled {
+    background: #222;
+}
+
+
+/* enabled inputs - rare used*/
+
+input:enabled {
+    background-color: #00ff00;
+}
+
+
+/* focus if not element in pseudo class all the elements  of form will take such a styling  */
+
+:focus {
+    box-shadow: 0 0 5px 2px #ffff00;
+}
+
+
+/* Invaalid sudo class - style */
+
+input:invalid {
+    outline: 2px solid #ff0000;
+}
+
+
+/* valid sudo class */
+
+input:valid {
+    outline: 2px solid #00ff00;
+}
+
+
+/* reuired inputs */
+
+input:required {
+    outline: 3px solid #0000ff;
+}
+
+
+/* optional- these which are not reauired */
+
+input:optional {
+    border-color: #555;
+}
+
+
+/* hiding the option inside select can be used for all the checking elements of form as select, radio button or checkboxes. */
+
+option:checked {
+    display: none;
+}
+
+
+/* Target sudoclas */
+
+p:target {
+    background: #ff0000;
+    color: #ddd;
+}
+
+
+/* Not target */
+
+p:not(:target) {
+    background-color: #000;
+    color: #fff;
+}
