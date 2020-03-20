@@ -1,0 +1,90 @@
+/* The header only */
+
+body {
+    margin: 0;
+}
+
+header {
+    margin: 0;
+    border-bottom: 1px solid #000;
+    padding: 0.5em 0;
+    background-color: #777;
+    color: #eee;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+
+/* Leture styles */
+
+
+/* main */
+
+.main {
+    margin: 30px;
+}
+
+
+/* floats */
+
+
+/* lerft */
+
+.left {
+    float: left;
+    background: #ff000099;
+}
+
+
+/* right */
+
+.right {
+    float: right;
+    background: #00ff0099;
+}
+
+
+/* both  - float elemets gets automatically display block*/
+
+.float {
+    width: 100px;
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+/* section backgound */
+
+section {
+    background: #eee;
+    /* back to first display */
+    /* float: left;
+    width: 100%; */
+}
+
+section:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* clear arrtibute */
+
+
+/* clear fix */
+
+
+/* div {
+    clear: both; */
+
+
+/* used to display element out of one box aaccordingly to the existed objects. */
+
+
+/* clear: left ;
+    clear: right; */
+
+
+/* } */
