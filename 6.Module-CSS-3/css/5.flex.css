@@ -1,0 +1,129 @@
+/* The header only */
+
+body {
+    margin: 0;
+}
+
+header {
+    margin: 0;
+    border-bottom: 1px solid #000;
+    padding: 0.5em 0;
+    background-color: #777;
+    color: #eee;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+
+/* Lecture styles */
+
+
+/* Flex for parent = parent -> flex conrainer */
+
+section {
+    margin-top: 20px;
+    display: flex;
+    background-color: #ddd;
+    /* styling for all elements */
+    /* colums direction makes the element block */
+    /* flex-direction: column; */
+    /* flex-direction: column-rverse; */
+    /* row dirctrion makes the elements inlines */
+    /* flex-direction: row-reverse; */
+    flex-direction: row;
+    /* for all child elements */
+    /* align-items: center; */
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    /* space in line */
+    /* justify-content: space-evenly; */
+    justify-content: center;
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+}
+
+
+/* boxes styling */
+
+div {
+    padding: 20px;
+    margin: 10px;
+    background: #aaa;
+    flex-grow: 1;
+    /* We cn add flex bais to each */
+    /* flex-basis: 50%; */
+    /* /shorthand - growth shrink basis*/
+    flex: 1 1 200px;
+}
+
+
+/* flex basis let's us customizing  with/height of the flex elements */
+
+
+/* .third {
+    flex-basis: 300px;  */
+
+
+/*the flex basis is more important than width */
+
+
+/* width: 500px;
+}
+
+.second {
+    width: 200px;
+} */
+
+
+/* !!! Flex-basis is more important than width  if they are used together */
+
+
+/* ----------- flex grow ----------------*/
+
+
+/* flex grow is sharing the all childs the full content place of parent box epending of the flex grow value renenber that it is n* *unit - units of width or height dependend of fles direction row/height/
+
+
+/* .third {
+    flex-grow: 1;
+}
+
+.second {
+    flex-grow: 1;
+}
+
+.one {
+    flex-grow: 1;
+} */
+
+
+/* flex shrink - do not let the element to be smaller than flex basis 
+calculation - width / n, where n = flex-shrink value
+*/
+
+
+/* .second {
+    flex-shrink: 0;
+} */
+
+
+/* Making the elements equal */
+
+.first {
+    /* for one elemenr */
+    /* align-self: center; */
+    /* top/left  row/columns*/
+    /* align-self: flex-start; */
+    /* bottom/right  row/columns*/
+    /* align-self: flex-end; */
+}
+
+
+/* ordering */
+
+.third {
+    order: -1;
+}
+
+
+/* flex row - can connect two values of flex-direction and flex-wrap */

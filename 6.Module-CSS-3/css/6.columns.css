@@ -1,0 +1,61 @@
+/* The header only */
+
+body {
+    margin: 0;
+}
+
+header {
+    margin: 0;
+    border-bottom: 1px solid #000;
+    padding: 0.5em 0;
+    background-color: #777;
+    color: #eee;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+
+/* Lecture styles */
+
+
+/* many columns display */
+
+section {
+    margin-top: 20px;
+    /* maximum count of columns if we are using the column width as well */
+    /* column-count: 3; */
+    /* minimal width of column */
+    /* column-width: 200px; */
+    /* /shorthand */
+    columns: 4 200px;
+    /* space between columns */
+    column-gap: 20px;
+    /*  line between columns shorthand*/
+    column-rule: 2px dotted #000;
+    /* column rule not shorthand */
+    /* column-rule-color: #000; */
+    /* column-rule-style: dashed; */
+    /* column-rule-width: 2px; */
+}
+
+h2 {
+    margin-top: 0;
+    /* divide between solumns */
+    column-span: all;
+    text-align: center;
+}
+
+p {
+    margin-top: 0;
+}
+
+p:nth-of-type(1) {
+    text-indent: 10px;
+}
+
+
+/* shitty attribute */
+
+article {
+    border: 2px dashed #0000ff;
+}
