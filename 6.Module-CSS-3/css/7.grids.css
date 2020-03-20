@@ -16,3 +16,125 @@ header {
 
 
 /* Lecture styles */
+
+
+/* section parent grid for each elements*/
+
+.one {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* autofill in grid template */
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+    /* grid-template-rows: 150px; */
+    /* automaticlu added rows customizing */
+    /* grid-auto-rows: minmax(150px, auto); */
+    /* space between the elements */
+    /* column-gap: 2px;
+    row-gap: 10px; */
+    /* shorthand rows/columns*/
+    gap: 20px 10px;
+
+}
+
+
+/* boxex*/
+
+.one div:nth-child(1) {
+    background-color: #777;
+
+}
+
+.one div:nth-child(2) {
+    background-color: #ff0000;
+
+
+}
+
+.one div:nth-child(3) {
+    background-color: #00ff00;
+
+    /* longhand */
+    /* grid-column-start: 2;
+    grid-column-end: 4; */
+    /* shorthand */
+    /* grid-column: 2/4; */
+    /* longhand */
+    /* grid-row-start: 2;
+    grid-row-end: 4; */
+    /* shorthand */
+    /* grid-row: 2/4; */
+    /* maximalize shorthand */
+    /* rowstart/columnstart/rowend/columnend */
+    /* grid-area: 1/2 /2/4; */
+}
+
+.one div:nth-child(4) {
+    background-color: #0000ff;
+    
+}
+
+.one div:nth-child(5) {
+    background-color: #d3bf0c;
+
+}
+
+
+/* customize for all elements of grid */
+
+.one div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* last div styles */
+
+.one div:last-child {
+    background-color: rgb(165, 127, 77);
+    display: grid;
+    grid-template-columns: repeat(3, 1frs);
+}
+
+.grids {
+    margin-top: 20px;
+    display: grid;
+    /* other way to create areas  extramally shorthand*/
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-rows: repeat(); */
+    grid-template-areas: 
+    "header header header" 
+    "aside main main"
+    "aside main main"
+    "aside section section"
+    "footer footer footer"
+}
+
+.grids div {
+    width: auto;
+    height: 100px;
+    background-color: #ccc;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+/*  For grids display */
+.grids div:nth-of-type(1) {
+    grid-area: header;
+    
+}
+.grids div:nth-of-type(3) {
+    grid-area: aside;
+}
+.grids div:nth-of-type(2) {
+    grid-area: main;
+}
+.grids div:nth-of-type(4) {
+    grid-area: section;
+}
+.grids div:nth-of-type(5) {
+    grid-area: footer;
+}
