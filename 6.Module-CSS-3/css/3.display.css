@@ -16,3 +16,41 @@ header {
 
 
 /* Leture styles */
+
+
+/* main */
+
+.main {
+    margin: 20px;
+}
+
+
+/* anchor tag dimensions */
+
+.main a {
+    display: block;
+    width: 200px;
+    height: 200px;
+    background: #ddd;
+}
+
+
+/* section elements */
+
+section div {
+    /* As a line element */
+    /* display: inline; */
+    /* As a line/block = line outside, block inside */
+    display: inline-block;
+    background-color: #aaa;
+    /* wont work */
+    width: 200px;
+    height: 200px;
+}
+
+
+/* hiding elements */
+
+section div {
+    display: none;
+}
