@@ -16,4 +16,162 @@ header {
 }
 
 
-/* Lecture styles */
+/* Homework  styles */
+/* texts all */
+/* Article first line in general */
+article::first-line {
+    color: #ff0000;
+}
+/* Article first line selection */
+article::selection {
+    background-color: #ff0000;
+    color: #fff;
+}
+/* Article first letter in general */
+article::first-letter {
+    color: #ff0000;
+    font-size: 3.5em;
+    float: left;
+    margin-bottom: -6px;
+    margin-right: 3px;
+    margin-top: -6px;
+    
+}
+/* Article images in general */
+article img {
+    width: 300px;
+    height: 200px;
+    border: 10px solid #eee;
+    border-radius: 25px;
+}
+
+/* article img first */
+article:nth-of-type(1) img {
+    float: right;
+}
+
+/* article img second */
+article:nth-of-type(2) img {
+    float: left;
+}
+/* first article */
+article:first-of-type {
+    margin: 5px;
+}
+
+/* lines hr styles */
+hr {
+    margin: 6% 0;
+}
+/* second section article 3 */
+article:nth-of-type(3) {
+    margin: 20px;
+}
+/* second section article 4*/
+article:nth-of-type(4) {
+    margin: 20px;
+    clear: both;
+}
+/* img third */
+article:nth-of-type(3) img {
+    float: left;
+}
+/* img fourth */
+article:nth-of-type(4) img {
+    float: right;
+}
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* Pictures display for later */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+/* Column section */
+article:nth-last-of-type(1) {
+    background-color: #eee;
+    columns: 4 200px;    
+}
+article:nth-last-of-type(1)::first-line {
+    color: #000;
+}
+article:nth-last-of-type(1)::first-letter {
+    color: #000;
+    font-size: 1em;
+    margin: 0;
+}
+/* columns header */
+article:nth-last-of-type(1) h2 {
+    background-color: #fff;
+    column-span: all;
+    padding: 10px;
+    margin: 20px;
+
+}
+
+/* Grid section */
+.grids {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    background: #fff;
+    grid-template-areas: 
+    "header header header header"
+    "nav main main aside"
+    "nav main main advertisement"
+    "footer footer footer footer";
+    gap: 2%;
+}
+/* elements of grid all */
+.g-element {
+    height: 100px;
+    position: relative;
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ /* dots for all */
+.g-element::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #aaa;
+    border: 1px solid #999;
+    border-radius: 50%;
+    right: 2px;
+    top: 2px;
+}
+
+/* Header */
+.grids h2 {
+    grid-area: header;
+}
+/* dot */
+
+/* nav */
+.grids nav {
+    grid-area: nav;
+    height: 100%;
+}
+/* main */
+.grids main {
+    grid-area: main;
+    height: 100%;
+}
+/* aside */
+.grids aside {
+    grid-area: aside;
+}
+/* advertisement */
+.grids div {
+    grid-area: advertisement;
+}
+/* footer */
+.grids footer {
+    grid-area: footer;
+}
+
+
