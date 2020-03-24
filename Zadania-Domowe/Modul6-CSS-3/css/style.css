@@ -127,7 +127,7 @@ article:nth-of-type(4) img {
     display: flex;
     flex-flow: column wrap;
     align-items: flex-start;
-    height: 700px;
+    height: 500px;
     width: 50%;
     margin: 0 auto;
     flex: auto;
@@ -139,7 +139,7 @@ article:nth-of-type(4) img {
 /* section images img */
 
 .images img {
-    width: 200px;
+    width: 150px;
     margin: 3px;
     flex: auto;
     background-size: cover;
