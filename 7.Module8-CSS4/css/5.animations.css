@@ -14,7 +14,69 @@ header {
     border-bottom: 1px solid #444;
     border-radius: 0 0 20px 20px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 
 /* Main */
+
+.element {
+    height: 150px;
+    width: 150px;
+    background: #000;
+    /* 2. adding animation */
+    /* animation-name: color; */
+    /* animation-duration: 2s; */
+    /* animation-delay: 1s; */
+    /* repeating of animation */
+    /* animation-iteration-count: 3; */
+    /* direction of animation */
+    /* animation-direction: reverse; */
+    /* animation-direction: alternate; */
+    /* animation-direction: alternate-reverse; */
+    /* second animation / many animations*/
+    /* animation-name: color, positions;
+    animation-duration: 2s, 4s;
+    animation-delay: 1s, 0s;
+    animation-iteration-count: 3;
+    animation-direction: alternate, reverse; */
+    /* Animation timing function */
+    /* animation-timing-function: ease-in; */
+    /* animation-fill-mode: forwards; */
+    /* animation-play-state: running; */
+    /* Shorthand 1=duration, 2-timing-function, 3-delay 4-repeat 5-direction 6-fill-mode 7-play-state 8-name*/
+    animation: 2s ease 1s 3 alternate forwards running positions;
+}
+
+
+/* Animaions */
+
+
+/* 1. animation definition - where color is it's names */
+
+@keyframes color {
+    from {
+        background: #ff0000;
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    to {
+        background: #0000ff;
+    }
+}
+
+
+/* !We can add couple animations at once */
+
+@keyframes positions {
+    from {
+        margin-left: 100px;
+    }
+    50% {
+        margin-left: 300px;
+    }
+    to {
+        margin-right: 150px;
+    }
+}
