@@ -18,3 +18,71 @@ header {
 
 
 /* Main */
+
+img {
+    width: 300px;
+    display: block;
+    margin: 100px auto;
+    /* Transition we are using in a specified element */
+    /* transition-duration: 2s; */
+    /* If we have couple properties separated we can add the time of transition at to singular element */
+    /* transition-duration: 2s, 1s; */
+    /* We can selecft the specified property to be changed */
+    /* Transform only */
+    /* transition-property: transform; */
+    /* We can add couple elements to the property we have here opacity also so why not to add it too */
+    /* transition-property: transform, opacity; */
+    /* !!! Not all properties can be animated because sometimes there is no meaning to do it */
+    /* We can as well declare how the separate element should be changed and for it we have the transition-timing-functrion */
+    /* So for the reasons let's declare the new transitions */
+    transition-duration: 3s;
+    /* transition-property: all; */
+    /* And now we can set the animations */
+    /* transition-timing-function: ease;
+    transition-timing-function: linear;
+    /* transition-timing-function: ease-in; */
+    transition-timing-function: ease;
+    /* transition-timing-function: ease-in-out; */
+    /* Interesting property is to set steps of our animation */
+    /* transition-timing-function: steps(5); */
+    /* transition-timing-function: step-start; */
+    /* transition-timing-function: step-end; */
+    /* Own funcrtion created with th cubic-bezier */
+    /* transition-timing-function: cubic-bezier(3.20.34, 40); */
+    /* We can delayed animation */
+    transition-delay: 0s, 2s;
+    /* We can also assigned the delay for each property */
+    transition-property: transform, opacity;
+    /* So now teoretically transform will not be delayed  and opacity by 3s */
+    /* shorthand 1par - duration, 2par - function, 3par - delayed - is recommented*/
+    transition: transform 3s linear 1s, opacity 1s ease-in 2s;
+}
+
+img:hover {
+    opacity: 0.5;
+    transform: scale(1.2);
+}
+
+
+/* !!!!!! The transition is working all the time for specified element not onlu for hover - we can add other class for element and than with js add the class to the picture and the transition will be implemented eg */
+
+
+/* img.bigger {
+    opacity: 0.5;
+    transform: scale(1.2);
+}
+img:first-child {
+    opacity: 0.5;
+    transform: scale(1.2);
+}
+img[title="any"] {
+    opacity: 0.5;
+    transform: scale(1.2);
+}
+img::after {
+    opacity: 0.5;
+    transform: scale(1.2);
+} */
+
+
+/* !!!!! These were only examples we can use but need to remember that can be as much as we want or is necessary to be used*/
