@@ -1,0 +1,26 @@
+/* All styles */
+
+* {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #777;
+    color: #eee;
+    font-weight: bold;
+    line-height: 50px;
+    border-bottom: 1px solid #444;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Main */
