@@ -1,8 +1,8 @@
 /* All styles */
 
 * {
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
     box-sizing: border-box;
 }
 
@@ -17,5 +17,125 @@ header {
     margin-bottom: 20px;
 }
 
+header h1 {
+    margin: 0;
+    padding: 0;
+}
+
 
 /* Main */
+
+
+/* taqble cells border */
+
+td,
+th,
+table {
+    border: 1px solid #000;
+}
+
+
+/* Customizing table cells distance */
+
+table {
+    width: 100%;
+    border-spacing: 2px;
+    padding: 5px;
+    /* or border collapse */
+    /* border-collapse: collapse; */
+    /* position of header of all table */
+    caption-side: bottom;
+    /* All content of table is considered for the cells width */
+    /* table-layout: all; */
+    /* Not considered */
+    /* table-layout: fixed; */
+    /* hiding empty cells */
+    empty-cells: hide;
+}
+
+
+/* Padding inside cells */
+
+td {
+    padding: 5px;
+}
+
+
+/* text centering in cells of table */
+
+th,
+td {
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* customize head cell width */
+
+th:first-child {
+    /* Works only if the content is short enough */
+    width: 15%;
+}
+
+
+/* Hovering tr colors */
+
+tr:hover {
+    background-color: #555;
+}
+
+tfoot {
+    font-weight: bold;
+}
+
+
+/* collapsed cells text style */
+
+td[colspan] {
+    text-align: right;
+    padding-right: 10px;
+}
+
+
+/* LISTS STYLING */
+
+
+/* Stye type */
+
+ol {
+    /* type */
+    /* list-style-type: circle; */
+    /* list-style-type: decimal; */
+    /* list-style-type: decimal-leading-zero; */
+    /* list-style-type: disc; */
+    /* list-style-type: square; */
+    /* list-style-type: lower-alpha; */
+    /* list-style-type: lower-roman; */
+    /* list-style-type: lower-latin; */
+    /* And some more but not all of them are supported vy all webbrowsers */
+    list-style-type: "🧑";
+    /* Position of list marker */
+    /* list-style-position: inside; */
+    /* list-style-position: outside; */
+    /* list-style-position: initial; */
+    /* Image can be used as well as a marked  - !!!! We can not manipulate of the size of image so it needs to be prepared for it*/
+    /* list-style-image: url('../images/image1.jpeg'); */
+    /* shorthand */
+    /* list-style: circle url('../images/image1.jpeg') inside; */
+}
+
+
+/* backround of li for check */
+
+li {
+    background-color: #ffff00;
+    list-style-position: outside;
+}
+
+li li {
+    background-color: #777;
+    list-style-position: inside;
+}
