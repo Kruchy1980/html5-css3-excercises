@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+
+/* Custom properties */
+
+:root {
+    --color-primary: #ff0000;
+    --color-secondary: #333;
+}
+
 body {
     margin: 0;
 }
@@ -26,3 +34,79 @@ header h1 {
 
 
 /* Main */
+
+
+/* Article */
+
+.article {
+    margin: 20px;
+    padding: 30px;
+    box-shadow: 0 0 10px #ccc;
+    color: var(--color-secondary);
+}
+
+
+/* article important */
+
+.article__important {
+    color: var(--color-primary);
+}
+
+
+/* Header of article */
+
+.aricle__header {
+    color: var(--color-primary);
+}
+
+
+/* Article--dark */
+
+.article--dark {
+    background: #222;
+    /* Changing of value of variable*/
+    --color-secondary: #ddd;
+    --color-primary: #0000ff;
+}
+
+
+/* Article more */
+
+.article__more {
+    text-decoration: none;
+    color: var(--color-primary);
+    border: 1px solid;
+    padding: 10px 20px;
+    display: block;
+    width: 150px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+
+/* Hover more */
+
+.article__more:hover {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+
+/* Funkcja calc - for basic calculations */
+
+
+/* eg */
+
+.article--dark .article__more {
+    /* width: calc(100% - 60px);
+    or */
+    width: calc(100% - (30px * 2));
+    margin: 0 30px;
+}
+
+
+/* 3 main words: 
+1. Inherit - dziedziczenie
+2. initial = none
+3. unset = initial for not,  inherited properties  - inherit 
+4. all: 1 || 2 || 3 = concerns all of the elements*/
