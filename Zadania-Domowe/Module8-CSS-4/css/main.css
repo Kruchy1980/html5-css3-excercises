@@ -1,7 +1,6 @@
 /* The header only */
 
 * {
-    margin: 0;
     box-sizing: border-box;
 }
 
@@ -17,3 +16,254 @@ header {
 
 
 /* Homework  styles */
+
+
+/* Main container */
+
+.container {
+    margin-top: 5%;
+    text-align: center;
+}
+
+
+/* Gradient */
+
+.gradient {
+    height: 100px;
+    background: linear-gradient(to right, #ff0000, #0000ff);
+    transition: 4s background;
+    background-size: 200%;
+}
+
+.gradient:hover {
+    background-position: 75%;
+}
+
+
+/* Square */
+
+.square {
+    margin: 5% 0;
+}
+
+
+/* square-item */
+
+.square__item {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 3px #aaa;
+}
+
+.square__item:hover {
+    animation-name: rotAround;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotAround {
+    0% {
+        transform: none;
+    }
+    16.7% {
+        transform: rotateX(90deg);
+    }
+    32.4% {
+        transform: none;
+    }
+    49.1% {
+        transform: rotateY(90deg);
+    }
+    65.8% {
+        transform: none;
+    }
+    82.5% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Circle */
+
+.circle {
+    width: 75vw;
+    height: 120px;
+    margin: 0 auto 10% auto;
+    padding: 1px 10px;
+    background: #fff;
+    box-shadow: 0 0 5px 3px #bbb;
+    border-radius: 20px;
+    position: relative;
+}
+
+
+/* Element  */
+
+.circle__element {
+    width: 60px;
+    height: 60px;
+    background: #aaa;
+    position: absolute;
+    border-radius: 6px;
+    margin: 30px 0;
+}
+
+.circle:hover .circle__element {
+    animation-name: transformation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.circle:hover .circle__element:hover {
+    animation-play-state: paused;
+}
+
+@keyframes transformation {
+    0% {
+        background-color: #333;
+        box-shadow: 0 0 5px 10px #ccc;
+    }
+    5% {
+        background-color: #00000011;
+        border-radius: 10%;
+        left: 4.2%;
+    }
+    10% {
+        background-color: #00000022;
+        left: 8.4%;
+    }
+    15% {
+        background-color: #00000033;
+        border-radius: 20%;
+        left: 12.6%;
+    }
+    20% {
+        background-color: #00000062;
+        left: 16.8%;
+    }
+    25% {
+        background-color: #000000a4;
+        border-radius: 30%;
+        left: 21%;
+    }
+    30% {
+        background-color: #000000da;
+        left: 25.2%;
+    }
+    35% {
+        background-color: #000000e5;
+        border-radius: 40%;
+        left: 29.4%;
+    }
+    40% {
+        background-color: #000000fd;
+        left: 33.6%;
+    }
+    45% {
+        background-color: #000000;
+        border-radius: 50%;
+        transform: rotateZ(0deg) scale(1.2);
+        left: 37.8%;
+    }
+    50% {
+        background-image: repeating-radial-gradient(#000 0 5%, #fff 5% 10%);
+        transform: rotateZ(180deg) scale(1.3);
+        left: 42%;
+    }
+    55% {
+        border-radius: 50%;
+        transform: rotateZ(360deg) scale(1.5);
+        left: 46.2%;
+    }
+    60% {
+        border-radius: 50%;
+        transform: rotateZ(540deg) scale(1.3);
+        left: 50.4%;
+    }
+    65% {
+        border-radius: 45.8%;
+        transform: rotateZ(720deg) scale(1.2);
+        left: 54.6%;
+    }
+    70% {
+        background-color: #0000001e;
+        border-radius: 40%;
+        left: 58.8%;
+    }
+    75% {
+        background-color: #00000077;
+        border-radius: 30%;
+        left: 63%;
+    }
+    80% {
+        background-color: #0000006c;
+        border-radius: 20%;
+        left: 67.2%;
+    }
+    85% {
+        background-color: #000000c5;
+        border-radius: 10%;
+        left: 71.6%;
+    }
+    90% {
+        background-color: #18798a8f;
+        border-radius: 5%;
+        left: 75.8%;
+    }
+    95% {
+        background-color: #0e5fbbb7;
+        border-radius: 6px;
+        left: 80%;
+    }
+    100% {
+        background-color: #2a4dc2ee;
+        left: calc(84.2% - 10px);
+    }
+}
+
+
+/* Images */
+
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    column-width: 250px;
+}
+
+
+/* Images */
+
+.gallery__item {
+    width: 100%;
+    height: 50%;
+    padding: 5px;
+    background-size: cover;
+}
+
+
+/* Media Query */
+
+@media screen and (min-width: 768px) {
+    .gallery {
+        width: 75%;
+        margin: 30px auto;
+        /* justify-content: center; */
+    }
+    .gallery__item {
+        width: 250px;
+        margin: 0 auto;
+        height: 200px;
+        padding: 10px;
+        background-size: cover;
+    }
+}

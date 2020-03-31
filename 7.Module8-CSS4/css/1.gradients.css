@@ -1,183 +1,229 @@
-    /* All styles */
-    
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        text-align: center;
+/* All styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+header {
+    background-color: #777;
+    color: #eee;
+    font-weight: bold;
+    line-height: 50px;
+    border-bottom: 1px solid #444;
+    border-radius: 0 0 20px 20px;
+}
+
+
+/* Main */
+
+.main {
+    margin: 20px 0;
+}
+
+div {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    height: 300px;
+}
+
+
+/* div */
+
+
+/*1. simplest gradient - more colors */
+
+.one {
+    background-image: linear-gradient(#ff0000, #0000ff);
+}
+
+
+/*2. more about gradient */
+
+.two {
+    background-image: linear-gradient(#ff0000, #00ff00, #0000ff, #00ffff, #ffff00);
+}
+
+
+/* 3. direction of colors */
+
+.three {
+    /* background-image: linear-gradient(to top, #ff0000, #00ff00, #0000ff, #00ffff, #ffff00); */
+    /* to bottom is defined style */
+    background-image: linear-gradient(to bottom, #ff0000, #00ff00, #0000ff, #00ffff, #ffff00);
+    /* background-image: linear-gradient(to top right, #ff0000, #00ff00, #0000ff, #00ffff, #ffff00); */
+    /* background-image: linear-gradient(to top left, #ff0000, #00ff00, #0000ff, #00ffff, #ffff00); */
+    /* background-image: linear-gradient(to bottom right, #ff0000, #00ff00, #0000ff, #00ffff, #ffff00); */
+    /* background-image: linear-gradient(to bottom left, #ff0000, #00ff00, #0000ff, #00ffff, #ffff00); */
+}
+
+
+/* 4. not stqandrd angle */
+
+.four {
+    /* for not standard angle we can add the degrees instead of fixed directions  + and -  vlue availible*/
+    background-image: linear-gradient(53deg, #ff0000, #00ff00, #0000ff, #00ffff, #ffff00);
+}
+
+
+/*5.  The colors are the stops which we can decide where they can start*/
+
+.five {
+    /* if we set the percentage and it should be percentqage and px only 
+1. first position we can set the range of the normal color 
+2. the second value stops the normal color and starts gradients later
+3. the value between colors separated by comas is a cente point of gradient
+4. Important the values should be coded after the colors*/
+    background-image: linear-gradient(#ff0000 12%, #00ff00 12% 200px, 80%, #0000ff, #00ffff, #ffff00);
+}
+
+
+/* 6. The percentage range of uniform/jednolity color we can set using two values after each other */
+
+.six {
+    background-image: linear-gradient(#ff0000 0% 33%, #00ff00 36% 55%, #0000ff 65% 75%);
+    /* for example internet explorer do not uses the record above so it is needed to write as below */
+    background-image: linear-gradient(#ff0000 0%, #ff0000 33%, #00ff00 36%, #00ff00 55%, #0000ff 65%, #0000ff 75%);
+}
+
+
+/* 7. Exmple of funny use */
+
+.seven {
+    background-image: linear-gradient(to top right, #ff0000 0 50%, #0000ff 50%);
+}
+
+
+/* 8. Using the transparency for multi gradients */
+
+.eight {
+    /* We can add mulyiple gradients inside */
+    background-image: linear-gradient(to top right, #ff000083 0 50%, #0000ff7e 50% 100%), linear-gradient(#00ff00 0 50%, #ffff00 50% 100%);
+}
+
+
+/* 9. Adding the imagegs to the gradients */
+
+.nine {
+    background-image: linear-gradient(#ff000080 0 40%, transparent 50% 100%), url("/7.Module8-CSS4/images/image1.jpeg");
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    height: 400px;
+}
+
+
+/* Radial gradient */
+
+
+/* basic */
+
+.ten {
+    background-image: radial-gradient(#ff0000, #0000ff);
+}
+
+
+/* Chnging the center position */
+
+.eleven {
+    /* at does not work in safari  but can be sed px or %*/
+    background-image: radial-gradient(at 10% 20%, #ff0000, #0000ff);
+}
+
+
+/* Shape of center */
+
+.twelve {
+    /* defined is ellipse but we can change it */
+    background-image: radial-gradient(circle, #ff0000, #0000ff);
+}
+
+
+/* Dimensions of center */
+
+.thirteen {
+    /* defined is ellipse but we can change it */
+    background-image: radial-gradient(ellipse clossest-side, #ff0000, #0000ff);
+    /* background-image: radial-gradient(ellipse fartest-side, #ff0000, #0000ff); */
+    /* the clossest corner is defined so we do not need to place in in the radial gradient */
+    /* background-image: radial-gradient(ellipse clossest-corner, #ff0000, #0000ff); ==
+background-image: radial-gradient( #ff0000, #0000ff); */
+    /* background-image: radial-gradient(ellipse fartest-corner, #ff0000, #0000ff); */
+}
+
+
+/* Playing with radial gradient */
+
+.fourteen {
+    background-image: radial-gradient(at 10% 15%, #ff000080, #0000ff80), radial-gradient(at 80% 80%, #ffff00, #00ffff);
+}
+
+
+/* Conic gradient - does not work on firefox can not use the absolute units as px only the relative one*/
+
+.fiveteen {
+    margin: 3% auto;
+    background-image: conic-gradient(#ff0000, #0000ff);
+    /* exzmple of circle diaghram */
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+
+/* Changing the places of diaghram start and add some more colors */
+
+.sixteen {
+    margin: 3% auto;
+    background-image: conic-gradient(from 12deg, #ff0000 20%, #0000ff 35%, #ffff00 40%);
+    /* exzmple of circle diaghram */
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+
+/* Cheesboard created with the conic gradient */
+
+.seventeen {
+    margin: 3% auto;
+    background-image: conic-gradient(#000 0% 25%, #fff 25% 50%, #000 50% 75%, #fff 75% 100%);
+    /* exzmple of circle diaghram */
+    width: 300px;
+    height: 300px;
+    background-size: 12.5% 12.5%;
+    border: 1px solid #000;
+}
+
+
+/* Repeating linear or other grqadients */
+
+
+/* the difference is mesured from bottom value to top value so here is 15% and it will contqain 100%/15% times the same gradient */
+
+.eighteen {
+    background-image: repeating-linear-gradient(#0000ff 5%, #ff0000 20%);
+}
+
+
+/* The hypnotizing circle */
+
+.nineteen {
+    margin: 3% auto;
+    background-image: repeating-radial-gradient(#000 0 5%, #fff 5% 10%);
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    animation: circle 3s linear infinite;
+}
+
+@keyframes circle {
+    from {
+        transform: rotate(0deg);
     }
-    
-    header {
-        background-color: #777;
-        color: #eee;
-        font-weight: bold;
-        line-height: 50px;
-        border-bottom: 1px solid #444;
-        border-radius: 0 0 20px 20px;
+    to {
+        transform: rotate(360deg);
     }
-    /* Main */
-    
-    .main {
-        margin: 20px 0;
-    }
-    
-    div {
-        margin-top: 20px;
-        font-size: 30px;
-        font-weight: bold;
-        height: 300px;
-    }
-    /* div */
-    /*1. simplest gradient - more colors */
-    
-    .one {
-        background-image: linear-gradient(#ff0000, #0000ff);
-    }
-    /*2. more about gradient */
-    
-    .two {
-        background-image: linear-gradient(#ff0000, #00ff00, #0000ff, #00ffff, #ffff00);
-    }
-    /* 3. direction of colors */
-    
-    .three {
-        /* background-image: linear-gradient(to top, #ff0000, #00ff00, #0000ff, #00ffff, #ffff00); */
-        /* to bottom is defined style */
-        background-image: linear-gradient(to bottom, #ff0000, #00ff00, #0000ff, #00ffff, #ffff00);
-        /* background-image: linear-gradient(to top right, #ff0000, #00ff00, #0000ff, #00ffff, #ffff00); */
-        /* background-image: linear-gradient(to top left, #ff0000, #00ff00, #0000ff, #00ffff, #ffff00); */
-        /* background-image: linear-gradient(to bottom right, #ff0000, #00ff00, #0000ff, #00ffff, #ffff00); */
-        /* background-image: linear-gradient(to bottom left, #ff0000, #00ff00, #0000ff, #00ffff, #ffff00); */
-    }
-    /* 4. not stqandrd angle */
-    
-    .four {
-        /* for not standard angle we can add the degrees instead of fixed directions  + and -  vlue availible*/
-        background-image: linear-gradient(53deg, #ff0000, #00ff00, #0000ff, #00ffff, #ffff00);
-    }
-    /*5.  The colors are the stops which we can decide where they can start*/
-    
-    .five {
-        /* if we set the percentage and it should be percentqage and px only 
-    1. first position we can set the range of the normal color 
-    2. the second value stops the normal color and starts gradients later
-    3. the value between colors separated by comas is a cente point of gradient
-    4. Important the values should be coded after the colors*/
-        background-image: linear-gradient(#ff0000 12%, #00ff00 12% 200px, 80%, #0000ff, #00ffff, #ffff00);
-    }
-    /* 6. The percentage range of uniform/jednolity color we can set using two values after each other */
-    
-    .six {
-        background-image: linear-gradient(#ff0000 0% 33%, #00ff00 36% 55%, #0000ff 65% 75%);
-        /* for example internet explorer do not uses the record above so it is needed to write as below */
-        background-image: linear-gradient(#ff0000 0%, #ff0000 33%, #00ff00 36%, #00ff00 55%, #0000ff 65%, #0000ff 75%);
-    }
-    /* 7. Exmple of funny use */
-    
-    .seven {
-        background-image: linear-gradient(to top right, #ff0000 0 50%, #0000ff 50%);
-    }
-    /* 8. Using the transparency for multi gradients */
-    
-    .eight {
-        /* We can add mulyiple gradients inside */
-        background-image: linear-gradient(to top right, #ff000083 0 50%, #0000ff7e 50% 100%), linear-gradient(#00ff00 0 50%, #ffff00 50% 100%);
-    }
-    /* 9. Adding the imagegs to the gradients */
-    
-    .nine {
-        background-image: linear-gradient(#ff000080 0 40%, transparent 50% 100%), url("/7.Module8-CSS4/images/image1.jpeg");
-        background-repeat: no-repeat;
-        background-size: contain, cover;
-        height: 400px;
-    }
-    /* Radial gradient */
-    /* basic */
-    
-    .ten {
-        background-image: radial-gradient(#ff0000, #0000ff);
-    }
-    /* Chnging the center position */
-    
-    .eleven {
-        /* at does not work in safari  but can be sed px or %*/
-        background-image: radial-gradient(at 10% 20%, #ff0000, #0000ff);
-    }
-    /* Shape of center */
-    
-    .twelve {
-        /* defined is ellipse but we can change it */
-        background-image: radial-gradient(circle, #ff0000, #0000ff);
-    }
-    /* Dimensions of center */
-    
-    .thirteen {
-        /* defined is ellipse but we can change it */
-        background-image: radial-gradient(ellipse clossest-side, #ff0000, #0000ff);
-        /* background-image: radial-gradient(ellipse fartest-side, #ff0000, #0000ff); */
-        /* the clossest corner is defined so we do not need to place in in the radial gradient */
-        /* background-image: radial-gradient(ellipse clossest-corner, #ff0000, #0000ff); ==
-    background-image: radial-gradient( #ff0000, #0000ff); */
-        /* background-image: radial-gradient(ellipse fartest-corner, #ff0000, #0000ff); */
-    }
-    /* Playing with radial gradient */
-    
-    .fourteen {
-        background-image: radial-gradient(at 10% 15%, #ff000080, #0000ff80), radial-gradient(at 80% 80%, #ffff00, #00ffff);
-    }
-    /* Conic gradient - does not work on firefox can not use the absolute units as px only the relative one*/
-    
-    .fiveteen {
-        margin: 3% auto;
-        background-image: conic-gradient(#ff0000, #0000ff);
-        /* exzmple of circle diaghram */
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-    }
-    /* Changing the places of diaghram start and add some more colors */
-    
-    .sixteen {
-        margin: 3% auto;
-        background-image: conic-gradient(from 12deg, #ff0000 20%, #0000ff 35%, #ffff00 40%);
-        /* exzmple of circle diaghram */
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-    }
-    /* Cheesboard created with the conic gradient */
-    
-    .seventeen {
-        margin: 3% auto;
-        background-image: conic-gradient(#000 0% 25%, #fff 25% 50%, #000 50% 75%, #fff 75% 100%);
-        /* exzmple of circle diaghram */
-        width: 300px;
-        height: 300px;
-        background-size: 12.5% 12.5%;
-        border: 1px solid #000;
-    }
-    /* Repeating linear or other grqadients */
-    /* the difference is mesured from bottom value to top value so here is 15% and it will contqain 100%/15% times the same gradient */
-    
-    .eighteen {
-        background-image: repeating-linear-gradient(#0000ff 5%, #ff0000 20%);
-    }
-    /* The hypnotizing circle */
-    
-    .nineteen {
-        margin: 3% auto;
-        background-image: repeating-radial-gradient(#000 0 5%, #fff 5% 10%);
-        width: 290px;
-        height: 290px;
-        border-radius: 50%;
-        animation: circle 3s linear infinite;
-    }
-    
-    @keyframes circle {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
-    }
+}
