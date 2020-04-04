@@ -20,16 +20,64 @@
     <link rel="stylesheet" href="./css/container.css">
     <!-- Styleshet About -->
     <link rel="stylesheet" href="./css/about.css">
+    <!-- Styleshet Navigation -->
+    <link rel="stylesheet" href="./css/main-navigation.css">
 </head>
 
 <body>
+    <nav class="main-navigation">
+        <div class="main-navigation__inner">
+            <!-- Logo navigation -->
+            <div class="main-navigation__logo">
+                <a href="#" class="main-navigation__logo-link">
+                    <img src="./images/logo.svg" alt="Restaurant logo" class="main-navigation__logo-image"> Polskie Smaki
+                </a>
+            </div>
+            <!-- Main navigation - list -->
+            <ul class="main-navigation__menu js-main-navigation__menu">
+                <li class="main-navigation__menu-item">
+                    <a href="#" class="main-navigation__menu-item__link">Domowa</a>
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a href="#about" class="main-navigation__menu-item__link">O nas</a>
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a href="#menu" class="main-navigation__menu-item__link">Menu</a>
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a href="#gallery" class="main-navigation__menu-item__link">Galeria</a>
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a href="#contact" class="main-navigation__menu-item__link">Kontakt</a>
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a href="#map" class="main-navigation__menu-item__link">Jak dojechać</a>
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a href="https://instagram.com" class="main-navigation__menu-item__link">
+                        <img src="./images/icons/social/instagram.svg" alt="Instagram" class="main-navigation__menu-item__link-icon">
+                    </a>
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a href="https://facebook.com" class="main-navigation__menu-item__link">
+                        <img src="./images/icons/social/facebook.svg" alt="Facebook" class="main-navigation__menu-item__link-icon">
+                    </a>
+                </li>
+            </ul>
+            <button class="main-navigation__mobile-button js-main-navigation__mobile-button">
+                <img src="./images/icons/navigation.svg" alt="Hamburger" class="main-navigation__mobile-button-image">
+            </button>
+        </div>
+    </nav>
+    <!-- Banner section-->
     <section class="main-banner">
         <a href="#about" class="main-banner__button">
             Poznaj nas lepiej !
         </a>
     </section>
-    <div class="container">
-        <section class="about" id="about">
+    <!-- About section -->
+    <div class="container" id="about">
+        <section class="about">
             <div class="about__text">
                 <h3 class="about__header">Nie jesteśmy tylko restauracją</h3>
                 <p class="about__paragraph">
@@ -44,7 +92,18 @@
             <img src="./images/about-us.jpg" alt="About us" class="about__image">
         </section>
     </div>
+    <script>
+        (() => {
+            const button = document.querySelector('.js-main-navigation__mobile-button');
+            const menu = document.querySelector('.js-main-navigation__menu');
 
+            const toggleClass = () => {
+                menu.classList.toggle('main-navigation__menu--open');
+            };
+            button.addEventListener('click', toggleClass);
+            menu.addEventListener('click', toggleClass);
+        })();
+    </script>
 </body>
 
 </html>
