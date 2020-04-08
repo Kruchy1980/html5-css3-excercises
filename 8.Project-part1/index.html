@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="./css/about.css">
     <!-- Styleshet Navigation -->
     <link rel="stylesheet" href="./css/main-navigation.css">
+    <!-- Styleshet Bookmrks -->
+    <link rel="stylesheet" href="./css/bookmarks.css">
 </head>
 
 <body>
@@ -51,7 +53,7 @@
                     <a href="#contact" class="main-navigation__menu-item__link">Kontakt</a>
                 </li>
                 <li class="main-navigation__menu-item">
-                    <a href="#map" class="main-navigation__menu-item__link">Jak dojechać</a>
+                    <a href="#route" class="main-navigation__menu-item__link">Jak dojechać</a>
                 </li>
                 <li class="main-navigation__menu-item">
                     <a href="https://instagram.com" class="main-navigation__menu-item__link">
@@ -92,6 +94,26 @@
             <img src="./images/about-us.jpg" alt="About us" class="about__image">
         </section>
     </div>
+    <!-- Menu -->
+    <section class="bookmark bookmark--menu" id="menu">
+        <h2 class="bookmark__header">Menu</h2>
+        <p class="bookmark__description">Spójrz, co dla Ciebie przygotowaliśmy.</p>
+    </section>
+    <!-- Gallery -->
+    <section class="bookmark bookmark--gallery" id="gallery">
+        <h2 class="bookmark__header">Galleria</h2>
+        <p class="bookmark__description">Tak wyglądają nasze posiłki.</p>
+    </section>
+    <!-- Contact -->
+    <section class="bookmark bookmark--contact" id="contact">
+        <h2 class="bookmark__header">Kontakt</h2>
+        <p class="bookmark__description">Porozmawiaj z nami lub zarezerwój stolik.</p>
+    </section>
+    <!-- Route -->
+    <section class="bookmark bookmark--route" id="route">
+        <h2 class="bookmark__header">Jak dojechać</h2>
+        <p class="bookmark__description">Łatwo nas znaleźć.</p>
+    </section>
     <script>
         (() => {
             const button = document.querySelector('.js-main-navigation__mobile-button');

@@ -66,6 +66,7 @@
     list-style: none;
     transition: 0.5s;
     transition-property: opacity;
+    z-index: 1;
 }
 
 
@@ -160,11 +161,6 @@
         width: 40px;
         margin-right: 20px;
     }
-    /* menu icons styles */
-    /* .main-navigation__menu-item__link-icon {
-        margin-top: 0;
-        width: 20px;
-    } */
     /* Links styling */
     /* Main navigation logo link */
     .main-navigation__logo-link {
