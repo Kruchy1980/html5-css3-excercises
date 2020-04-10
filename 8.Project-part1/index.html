@@ -1,33 +1,25 @@
-<!DOCTYPE html>
-<html lang="pl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Restauracja, w której zjesz tanio i smacznie">
-    <title>Restauracja "Polskie smaki"</title>
-    <!-- Bookmark icon -->
-    <link rel="icon" href="./bookmark-icon/restaurant.png">
-    <!-- Normalize file -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
-    <!-- Fonts link -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-    <!-- Stylesheet - main -->
-    <link rel="stylesheet" href="./css/global.css">
-    <!-- Stylesheet banner -->
-    <link rel="stylesheet" href="./css/main-banner.css">
-    <!-- Styleshet container -->
-    <link rel="stylesheet" href="./css/container.css">
-    <!-- Styleshet About -->
-    <link rel="stylesheet" href="./css/about.css">
-    <!-- Styleshet Navigation -->
-    <link rel="stylesheet" href="./css/main-navigation.css">
-    <!-- Styleshet Bookmrks -->
-    <link rel="stylesheet" href="./css/bookmarks.css">
-    <!-- Styleshet Menu -->
-    <link rel="stylesheet" href="./css/menu.css">
-    <!-- Styleshet Gallery -->
-    <link rel="stylesheet" href="./css/gallery.css">
+(() => { const button = document.querySelector('.js-main-navigation__mobile-button'); const menu = document.querySelector('.js-main-navigation__menu'); const toggleClass = () => { menu.classList.toggle('main-navigation__menu--open'); }; button.addEventListener('click',
+toggleClass); menu.addEventListener('click', toggleClass); })();link rel="icon" href="./bookmark-icon/restaurant.png">
+<!-- Normalize file -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+<!-- Fonts link -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+<!-- Stylesheet - main -->
+<link rel="stylesheet" href="./css/global.css">
+<!-- Stylesheet banner -->
+<link rel="stylesheet" href="./css/main-banner.css">
+<!-- Styleshet container -->
+<link rel="stylesheet" href="./css/container.css">
+<!-- Styleshet About -->
+<link rel="stylesheet" href="./css/about.css">
+<!-- Styleshet Navigation -->
+<link rel="stylesheet" href="./css/main-navigation.css">
+<!-- Styleshet Bookmrks -->
+<link rel="stylesheet" href="./css/bookmarks.css">
+<!-- Styleshet Menu -->
+<link rel="stylesheet" href="./css/menu.css">
+<!-- Styleshet Gallery -->
+<link rel="stylesheet" href="./css/gallery.css">
 </head>
 
 <body>
@@ -424,18 +416,10 @@
         <h2 class="bookmark__header">Jak dojechać</h2>
         <p class="bookmark__description">Łatwo nas znaleźć.</p>
     </section>
-    <script>
-        (() => {
-            const button = document.querySelector('.js-main-navigation__mobile-button');
-            const menu = document.querySelector('.js-main-navigation__menu');
-
-            const toggleClass = () => {
-                menu.classList.toggle('main-navigation__menu--open');
-            };
-            button.addEventListener('click', toggleClass);
-            menu.addEventListener('click', toggleClass);
-        })();
-    </script>
+    <footer>
+        <p>&copy; 2020 by Jakub Kruszyński</p>
+    </footer>
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>
