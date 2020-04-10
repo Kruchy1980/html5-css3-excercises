@@ -27,7 +27,7 @@
 
 /* For lesser than 768px */
 
-@media (max-width: 767px) {
+@media (max-width: 839px) {
     .about__header {
         font-size: 1.5em;
     }
@@ -45,7 +45,7 @@
 
 /* Lower than 768px */
 
-@media (max-width: 767px) {
+@media (max-width: 839px) {
     .about__paragraph {
         font-size: 1em;
         line-height: 1.2;
@@ -62,7 +62,7 @@
 
 /* Remove image if widthe lesser than 768px */
 
-@media (max-width: 767px) {
+@media (max-width: 839px) {
     .about__image {
         display: none;
     }
