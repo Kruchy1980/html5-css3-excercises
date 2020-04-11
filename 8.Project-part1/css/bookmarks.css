@@ -81,7 +81,7 @@
     margin: 0;
 }
 
-@media(min-width: 800px) {
+@media(min-width: 840px) {
     /* Header size */
     .bookmark__header {
         font-size: 100px;

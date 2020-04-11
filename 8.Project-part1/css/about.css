@@ -21,15 +21,15 @@
 
 .about__header {
     text-transform: uppercase;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 
 /* For lesser than 768px */
 
-@media (max-width: 839px) {
+@media (min-width: 840px) {
     .about__header {
-        font-size: 1.5em;
+        font-size: 2em;
     }
 }
 
@@ -37,18 +37,18 @@
 /* Text - paragrphs*/
 
 .about__paragraph {
-    font-size: 1.3em;
-    line-height: 1.4;
+    font-size: 1em;
+    line-height: 1.2;
     color: #aaa;
 }
 
 
 /* Lower than 768px */
 
-@media (max-width: 839px) {
+@media (min-width: 840px) {
     .about__paragraph {
-        font-size: 1em;
-        line-height: 1.2;
+        font-size: 1.3em;
+        line-height: 1.4;
     }
 }
 
@@ -56,14 +56,14 @@
 /* Image style */
 
 .about__image {
-    width: 40%;
+    display: none;
 }
 
 
 /* Remove image if widthe lesser than 768px */
 
-@media (max-width: 839px) {
+@media (min-width: 840px) {
     .about__image {
-        display: none;
+        width: 40%;
     }
 }

@@ -147,7 +147,7 @@
     }
 }
 
-@media(min-width: 768px) {
+@media(min-width: 840px) {
     /* contact-form__info-icon */
     .contact-form__info-icon {
         width: 1.2em;
